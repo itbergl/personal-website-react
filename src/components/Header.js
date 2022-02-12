@@ -1,20 +1,27 @@
 
 
 
-const Header = ({dim, color}) => {
+const Header = ({bannerHeight}) => {
 
     const css =  {
-        color: "red",
-        backgroundColor: color,
-        marginTop: "0px",
-        height: dim["bannerHeight"],
-        position: "fixed",
-        width: "100%"
+        height: bannerHeight,
     }
 
   return (
-    <div style = {css} className="top-banner">
-        <h1>IsaacBergl.com</h1>
+    <div style = {css} className="banner">
+      <div style = {{display: "flex", gap: "40px", marginLeft: "20px"}}>
+        <h1>IsaacBergl.com software engineering</h1>
+        <div className="banner-line"></div>
+      </div>
+      <div>
+        <h1>projects</h1>
+      </div>
+      <div>
+        <h1>experience</h1>
+      </div>
+      <div>
+        <h1>contact</h1>
+      </div>
     </div>
 
   )
