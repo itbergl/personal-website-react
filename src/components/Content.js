@@ -1,27 +1,36 @@
 import Panel from "./Panel"
 
-const Content = ({bannerHeight}) => {
-    const css = {
-        top: bannerHeight,
-        height: `calc(100vh - ${bannerHeight})`
-    }
+import Home from "./SubPages/Home"
+import Projects from "./SubPages/Projects"
+import Experience from "./SubPages/Experience"
+import Contact from "./SubPages/Contact"
 
-    // const getPage = () => {
-    //   switch (display) {
-    //     case ("Home"):
-    //       return <Home setSpotLight={setSpotLight}/>
-    //     case ("Projects"):
-    //       return <Projects setSpotLight={setSpotLight} />
-    //     case ("Contact"):
-    //       return <Contact setSpotLight={setSpotLight}/>
-    //     default:
-    //       return <div>No such page "{display}"" exists.</div>
-    //   }
-    // }
-  
+
+const Content = ({bannerHeight, selectedPage}) => {
+    const getPage = () => {
+      switch (selectedPage) {
+        case ("Home"):
+          return <Home />
+        case ("Projects"):
+          return <Projects />
+        case ("Experince"):
+            return <Experience />
+        case ("Contact"):
+          return <Contact />
+        default:
+          return <></>
+      }
+    }
     return (
-      <div className="content" style = {css}>
-        <Panel horizontal={true} title={<div>Hi</div>} footer={<div></div>} width="200px" ></Panel>
+  
+      <div className="scroll-content" 
+          style = {{
+            top: bannerHeight,
+            height: `calc(100vh - ${bannerHeight})`
+          }}>
+
+          {getPage()}
+
       </div>
   
     )

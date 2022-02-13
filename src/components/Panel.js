@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types'
 
-
-const Panel = ({title, content, footer,  width, bottom, titlePanel, horizontal, onClick}) => {
+// maybe remove width
+const Panel = ({title, content, footer,  width, bottom, titlePanel, gridColumn, horizontal, onClick}) => {
     const radius = "20px";
 
 
     const cssMain = {
-        padding: radius,
     }
 
     const cssHeader  = (horizontal? {
@@ -15,7 +14,7 @@ const Panel = ({title, content, footer,  width, bottom, titlePanel, horizontal, 
         paddingRight: 0,
     }:{borderTopLeftRadius:  radius,
         borderTopRightRadius:  radius,
-        paddingBottom:  0})
+       })
  
     const cssFooter = (horizontal? {
         borderTopRightRadius : radius,
@@ -37,10 +36,12 @@ const Panel = ({title, content, footer,  width, bottom, titlePanel, horizontal, 
         cssFooter.backgroundColor = "var(--col-primary)";
         cssHeader.backgroundColor = "var( --col-primary)";
         cssMain.backgroundColor = "var(--col-box-secondary)";
+        cssHeader.paddingBottom = radius;
+        cssHeader.alignContent = "center";
     }
 
   return (
-    <div className="panel" style={{width: width, flexDirection: (horizontal? "row": "column")}} onClick={onClick}>
+    <div className="panel" style={{width:width, gridColumn:gridColumn, flexDirection: (horizontal? "row": "column"), shadow:"var(--shadow)"}} onClick={onClick}>
         <div className = "panel-header" style={cssHeader}>
             {title}
         </div>

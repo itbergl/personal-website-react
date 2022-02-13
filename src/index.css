@@ -53,9 +53,8 @@ code {
     height: 50px;
 }
 
-.banner-text {
-    width: auto;
-    height: auto;
+.banner-text,
+.banner-text-selected {
     cursor: pointer;
     /* supported by Chrome and Opera */
     user-select: none;
@@ -73,14 +72,28 @@ code {
     color: var(--col-selected-text);
 }
 
-.banner-text--active {
+
+/* find another way to do this */
+
+.banner-text-selected {
     color: var(--col-selected-text);
 }
 
-.content {
+.scroll-content {
     overflow-y: scroll;
-    width: 100%;
+    width: 100vw;
     position: fixed;
+}
+
+.panel-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
+    column-gap: 20px;
+    padding-bottom: 2%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 2%;
 }
 
 .spotlight {
@@ -108,4 +121,20 @@ code {
 
 .panel-footer {
     background-color: var(--col-box-primary);
+}
+
+.page-title {
+    text-align: center;
+    font-size: 30px;
+}
+
+.panel-content {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.title-panel-container {
+    width: 50%;
+    margin: auto;
+    padding-top: 50px;
 }
