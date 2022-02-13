@@ -2,10 +2,6 @@ import React from 'react'
 import Panel from './Panel'
 
 const Contact = () => {
-    const width = {
-        width: "10vw",
-        textAlign: "center"
-    }
   return (
     <div>
         <div className="title-panel-container">

@@ -1,5 +1,5 @@
 
-import Panel from './Panel'
+// import Panel from './Panel'
 
 const Experience = () => {
   return (
