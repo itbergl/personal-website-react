@@ -6,6 +6,8 @@
     --col-banner-text: #D682AC;
     --col-box-primary: #202020;
     --col-box-secondary: #0C0C0C;
+    --col-regular-text: white;
+    --shadow: 0px 1px 40px black;
 }
 
 body {
@@ -21,6 +23,9 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+
+/* make this a separate componenet to blend the triangle edge */
+
 .page {
     height: 100vh;
     background: linear-gradient(to bottom left, var(--col-background-secondary) 0%, var(--col-background-secondary) 50%, var(--col-background-primary) 50%, var(--col-background-primary) 100%);
@@ -29,13 +34,15 @@ code {
 .banner {
     opacity: 70%;
     background-color: var(--col-primary);
+    overflow: hidden;
     color: var(--col-banner-text);
     width: 100%;
+    justify-items: center;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
-    align-items: end;
-    gap: 100px;
-    box-shadow: 0px 1px 40px black;
+    align-items: center;
+    gap: 50px;
+    box-shadow: var(--shadow);
 }
 
 .banner-line {
@@ -46,10 +53,34 @@ code {
     height: 50px;
 }
 
+.banner-text {
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    /* supported by Chrome and Opera */
+    user-select: none;
+    /* Safari */
+    -webkit-user-select: none;
+    /* Konqueror HTML */
+    -khtml-user-select: none;
+    /* Firefox */
+    -moz-user-select: none;
+    /* Internet Explorer/Edge */
+    -ms-user-select: none;
+}
+
+.banner-text:hover {
+    color: var(--col-selected-text);
+}
+
+.banner-text--active {
+    color: var(--col-selected-text);
+}
+
 .content {
     overflow-y: scroll;
     width: 100%;
-    position: "fixed";
+    position: fixed;
 }
 
 .spotlight {
@@ -60,4 +91,21 @@ code {
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
+}
+
+.panel {
+    display: flex;
+    color: var(--col-regular-text);
+}
+
+.panel-header {
+    background-color: var(--col-box-primary);
+}
+
+.panel-content {
+    background-color: var(--col-box-secondary);
+}
+
+.panel-footer {
+    background-color: var(--col-box-primary);
 }

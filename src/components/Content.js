@@ -1,4 +1,4 @@
-
+import Panel from "./Panel"
 
 const Content = ({bannerHeight}) => {
     const css = {
@@ -20,7 +20,9 @@ const Content = ({bannerHeight}) => {
     // }
   
     return (
-      <div className="content" style = {css}></div>
+      <div className="content" style = {css}>
+        <Panel horizontal={true} title={<div>Hi</div>} footer={<div></div>} width="200px" ></Panel>
+      </div>
   
     )
   }
