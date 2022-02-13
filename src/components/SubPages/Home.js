@@ -1,10 +1,9 @@
-import React from 'react'
+import Panel from './Panel'
 
-const Home = ({setSpotLight}) => {
+
+const Home = () => {
   return (
-    <div>Home
-    <button style={{width:"100px", height:"50px"}} onClick = {() => setSpotLight("Test")}></button>
-    </div>
+    <div>Home</div>
   )
 }
 

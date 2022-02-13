@@ -1,46 +1,35 @@
 
+
 import Home from "./SubPages/Home"
 import Projects from "./SubPages/Projects"
+import Experience from "./SubPages/Experience"
 import Contact from "./SubPages/Contact"
 
-
-const Content = ({dim, color, display, setSpotLight}) => {
-
-  const dest = `./components/SubPages/${display}.js`
-  console.log(dest)
-
-    const padding = "5vh";
-  
-    const css = {
-        overflowY: "scroll",
-        top: dim["bannerHeight"],
-        left: dim["sidebarWidth"],
-        width: `calc(100vw - ${dim["sidebarWidth"]})`,
-        position: "fixed",
-        backgroundColor: "yellow",
-        height: `calc(100vh - ${dim["bannerHeight"]} - ${dim["footerHeight"]})`
-    }
-
+//  TODO set min and max sizes for project panels
+const Content = ({bannerHeight, selectedPage}) => {
     const getPage = () => {
-      switch (display) {
+      switch (selectedPage) {
         case ("Home"):
-          return <Home setSpotLight={setSpotLight}/>
+          return <Home />
         case ("Projects"):
-          return <Projects setSpotLight={setSpotLight} />
+          return <Projects />
+        case ("Experince"):
+            return <Experience />
         case ("Contact"):
-          return <Contact setSpotLight={setSpotLight}/>
+          return <Contact />
         default:
-          return <div>No such page "{display}"" exists.</div>
+          return <></>
       }
     }
-  
     return (
-      <div className="content" style = {css}>
-        <div style = {{padding: padding}}>
-          {getPage()}
-          </div>
-        </div>
   
+      <div className="scroll-content" 
+          style = {{
+            top: bannerHeight,
+            height: `calc(100vh - ${bannerHeight})`
+          }}>
+          {getPage()}
+      </div>
     )
   }
   
