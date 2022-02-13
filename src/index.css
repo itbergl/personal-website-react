@@ -89,21 +89,12 @@ code {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 40px;
-    column-gap: 20px;
+    column-gap: 12vw;
+    /* Make these a variable */
     padding-bottom: 2%;
     padding-left: 15%;
     padding-right: 15%;
     padding-top: 2%;
-}
-
-.spotlight {
-    position: fixed;
-    background-color: bisque;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
 }
 
 .panel {
@@ -137,4 +128,24 @@ code {
     width: 50%;
     margin: auto;
     padding-top: 50px;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    padding-bottom: 2%;
+    /* padding-left: 15%;
+    padding-right: 15%; */
+    padding-top: 2%;
+}
+
+.contact-title {
+    width: 10vw;
+    text-align: center;
+}
+
+.contact-info {
+    text-align: center;
+    padding-right: 10vw;
 }

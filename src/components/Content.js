@@ -1,11 +1,11 @@
-import Panel from "./Panel"
+
 
 import Home from "./SubPages/Home"
 import Projects from "./SubPages/Projects"
 import Experience from "./SubPages/Experience"
 import Contact from "./SubPages/Contact"
 
-
+//  TODO set min and max sizes for project panels
 const Content = ({bannerHeight, selectedPage}) => {
     const getPage = () => {
       switch (selectedPage) {
@@ -28,11 +28,8 @@ const Content = ({bannerHeight, selectedPage}) => {
             top: bannerHeight,
             height: `calc(100vh - ${bannerHeight})`
           }}>
-
           {getPage()}
-
       </div>
-  
     )
   }
   

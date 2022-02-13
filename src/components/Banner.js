@@ -11,7 +11,7 @@ const Header = ({bannerHeight, selectedPage, setPage}) => {
     <div style = {css} className="banner">
       <div style = {{display: "flex", gap: "0px"}}>
         <h1 className={selectedPage === "Home"? "banner-text-selected": "banner-text"}
-          onClick={()=>setPage("Home")}>IsaacBergl.com software engineering</h1>
+          onClick={()=>setPage("Home")}>IsaacBergl<span style={{color: "var(--col-banner-text)"}}>.com</span> software engineering</h1>
         <div className="banner-line"></div>
       </div>
       <div>

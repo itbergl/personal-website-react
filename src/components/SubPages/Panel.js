@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types'
 
 // maybe remove width
-const Panel = ({title, content, footer,  width, bottom, titlePanel, gridColumn, horizontal, onClick}) => {
+const Panel = ({title, content, footer, width, bottom, titlePanel, horizontal, onClick}) => {
     const radius = "20px";
 
 
     const cssMain = {
+        width: "100%"
     }
 
     const cssHeader  = (horizontal? {
@@ -41,7 +42,7 @@ const Panel = ({title, content, footer,  width, bottom, titlePanel, gridColumn, 
     }
 
   return (
-    <div className="panel" style={{width:width, gridColumn:gridColumn, flexDirection: (horizontal? "row": "column"), shadow:"var(--shadow)"}} onClick={onClick}>
+    <div className="panel" style={{width: width, flexDirection: (horizontal? "row": "column")}} onClick={onClick}>
         <div className = "panel-header" style={cssHeader}>
             {title}
         </div>
@@ -60,7 +61,7 @@ Panel.defaultProps = {
     title: <></>,
     content: <></>,
     footer: <></>,
-    width: "auto",
+    width: "100%",
     bottom: true,
     titlePanel: false,
     horizontal: false,
