@@ -1,18 +1,18 @@
 :root {
-    --col-primary: #73264D;
-    --col-background-primary: #1E0C15;
+    --col-primary: #73264d;
+    --col-background-primary: #1e0c15;
     --col-background-secondary: #262626;
     --col-selected-text: white;
-    --col-banner-text: #D682AC;
+    --col-banner-text: #d682ac;
     --col-box-primary: #202020;
-    --col-box-secondary: #0C0C0C;
+    --col-box-secondary: #0c0c0c;
     --col-regular-text: white;
     --shadow: 0px 1px 40px black;
 }
 
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     height: 100%;
@@ -20,7 +20,7 @@ body {
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 
@@ -28,11 +28,11 @@ code {
 
 .page {
     height: 100vh;
-    background: linear-gradient(to bottom left, var(--col-background-secondary) 0%, var(--col-background-secondary) 50%, var(--col-background-primary) 50%, var(--col-background-primary) 100%);
+    background: linear-gradient( to bottom left, var(--col-background-secondary) 0%, var(--col-background-secondary) 50%, var(--col-background-primary) 50%, var(--col-background-primary) 100%);
 }
 
 .banner {
-    opacity: 70%;
+    /* opacity: 70%; */
     background-color: var(--col-primary);
     overflow: hidden;
     color: var(--col-banner-text);
@@ -148,4 +148,103 @@ code {
 .contact-info {
     text-align: center;
     padding-right: 10vw;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Set a background color */
+
+body {
+    background-color: #474e5d;
+    font-family: Helvetica, sans-serif;
+}
+
+
+/* The actual timeline (the vertical ruler) */
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+
+/* The actual timeline (the vertical ruler) */
+
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: var(--col-primary);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+}
+
+
+/* Container around content */
+
+.timeline-element-container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    left: 0;
+}
+
+.timeline-element-container:nth-of-type(even) {
+    left: 50%;
+}
+
+.timeline-element-container:nth-of-type(even)>.ball {
+    left: 0;
+    transform: translate(-12px, 0px);
+}
+
+
+/* The circles on the timeline */
+
+.ball {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 20px;
+    left: calc(50% - 12px);
+    background-color: var(--col-primary);
+    border: 4px solid var(--col-primary);
+    border-radius: 50%;
+    z-index: 1;
+    left: 100%;
+    transform: translate(-12px, 0px);
+}
+
+.year-label {
+    width: 80px;
+    text-align: center;
+    color: var(--col-regular-text);
+    margin: auto;
+    background-color: var(--col-banner-text);
+}
+
+.year-label>h3 {
+    margin: 5px;
+}
+
+
+/* The actual content */
+
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
 }
