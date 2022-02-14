@@ -6,7 +6,7 @@ const bannerHeight = "100px";
 
 function App() {
   const [page, setPage] = useState("Home");
-
+  // TODO caching
   return (
     <div className="page">
       <Banner

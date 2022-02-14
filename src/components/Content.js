@@ -11,7 +11,7 @@ const Content = ({ bannerHeight, selectedPage }) => {
         return <Home />;
       case "Projects":
         return <Projects />;
-      case "Experince":
+      case "Experience":
         return <Experience />;
       case "Contact":
         return <Contact />;
