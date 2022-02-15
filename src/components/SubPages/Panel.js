@@ -54,14 +54,17 @@ const Panel = ({
   return (
     <div
       className="panel"
-      style={{ width: width, flexDirection: horizontal ? "row" : "column" }}
+      style={{
+        width: width,
+        flexDirection: horizontal ? "row" : "column",
+      }}
       onClick={onClick}
     >
       <div className="panel-header" style={cssHeader}>
         {title}
       </div>
       <div className="panel-content" style={cssMain}>
-        <div style={{ padding: radius }}>{content}</div>
+        <div style={{ padding: radius, height: "100%" }}>{content}</div>
       </div>
       {bottom ? (
         <div className="panel-footer" style={cssFooter}>

@@ -30,7 +30,6 @@ const Projects = () => {
               repudiandae temporibus quos animi!
             </div>
           }
-          gridColumn={"1/2"}
         ></Panel>
         <Panel
           title={<div className="page-title">Projects</div>}
@@ -42,7 +41,6 @@ const Projects = () => {
               repudiandae temporibus quos animi!
             </div>
           }
-          gridColumn={"2/3"}
         ></Panel>
       </div>
     </div>
