@@ -24,6 +24,40 @@ code {
 }
 
 
+/* SCROLLBAR */
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    opacity: 100%;
+    background: var(--col-box-secondary);
+    border-radius: 8px;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: var(--col-primary);
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--col-banner-text);
+}
+
+
 /* make this a separate componenet to blend the triangle edge */
 
 .page {
@@ -80,7 +114,7 @@ code {
 }
 
 .scroll-content {
-    overflow-y: scroll;
+    overflow-y: auto;
     width: 100vw;
     position: fixed;
 }

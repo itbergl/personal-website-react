@@ -6,7 +6,7 @@ const Experience = () => {
       <div className="title-panel-container">
         <Panel
           titlePanel={true}
-          title={<div className="page-title">Projects</div>}
+          title={<div className="page-title">Experience</div>}
           content={
             <div className="panel-text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
