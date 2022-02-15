@@ -1,51 +1,89 @@
 import React from "react";
 import Panel from "./Panel";
 
+import email from "../../images/email.png";
+import phone from "../../images/phone.png";
+import linkedin from "../../images/linkedin.png";
+import github from "../../images/github.png";
+
 const Contact = () => {
   return (
     <div>
       <div className="title-panel-container">
         <Panel
           titlePanel={true}
-          title={<div className="page-title">Contact</div>}
           content={
             <div className="panel-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              quod incidunt facere optio! Exercitationem libero eos corporis at.
-              Est fuga exercitationem debitis itaque alias adipisci eos
-              repudiandae temporibus quos animi!
+              Contact me with the details below, or click on links to my other
+              profiles.
             </div>
           }
+          width={"40vw"}
+          title={<div className="page-title">Contact</div>}
           bottom={false}
           // change this
         />
 
         <div className="contact-list">
           <Panel
-            title={<div className="contact-title">E-mail</div>}
+            title={
+              <img src={email} alt="email icon" className="contact-icon"></img>
+            }
             content={
               <div className="contact-info">isaac.bergl@outlook.com</div>
             }
             horizontal={true}
-            bottom={false}
+            // bottom={false}
           />
           <Panel
-            title={<div className="contact-title">Phone</div>}
+            title={
+              <img src={phone} alt="phone icon" className="contact-icon"></img>
+            }
             content={<div className="contact-info">+61 43 960 473</div>}
             horizontal={true}
-            bottom={false}
+            // bottom={false}
           />
           <Panel
-            title={<div className="contact-title">LinkedIn</div>}
-            content={<div className="contact-info">my profile</div>}
+            title={
+              <img
+                src={linkedin}
+                alt="linkedin icon"
+                className="contact-icon"
+              ></img>
+            }
+            content={
+              <div className="contact-info">
+                <a
+                  className="external-link"
+                  href={"https://www.linkedin.com/in/isaac-bergl-2531b81b5/"}
+                >
+                  my LinkedIn profile
+                </a>
+              </div>
+            }
             horizontal={true}
-            bottom={false}
+            // bottom={false}
           />
           <Panel
-            title={<div className="contact-title">Github Profile</div>}
-            content={<div className="contact-info">my profile</div>}
+            title={
+              <img
+                src={github}
+                alt="github icon"
+                className="contact-icon"
+              ></img>
+            }
+            content={
+              <div className="contact-info">
+                <a
+                  className="external-link"
+                  href={"https://github.com/itbergl"}
+                >
+                  my github profile
+                </a>
+              </div>
+            }
             horizontal={true}
-            bottom={false}
+            // bottom={false}
           />
         </div>
       </div>
