@@ -8,6 +8,7 @@ const Panel = ({
   width,
   bottom,
   titlePanel,
+  isNoMain,
   horizontal,
   onClick,
 }) => {
@@ -56,6 +57,7 @@ const Panel = ({
       className="panel"
       style={{
         width: width,
+        margin: "auto",
         flexDirection: horizontal ? "row" : "column",
       }}
       onClick={onClick}
@@ -63,9 +65,13 @@ const Panel = ({
       <div className="panel-header" style={cssHeader}>
         {title}
       </div>
-      <div className="panel-content" style={cssMain}>
-        <div style={{ padding: radius, height: "100%" }}>{content}</div>
-      </div>
+      {isNoMain ? (
+        <></>
+      ) : (
+        <div className="panel-content" style={cssMain}>
+          <div style={{ padding: radius, height: "100%" }}>{content}</div>
+        </div>
+      )}
       {bottom ? (
         <div className="panel-footer" style={cssFooter}>
           {" "}
@@ -82,6 +88,7 @@ Panel.defaultProps = {
   footer: <></>,
   width: "100%",
   bottom: true,
+  isNoMain: false,
   titlePanel: false,
   horizontal: false,
   onClick: null,
@@ -93,6 +100,7 @@ Panel.propTypes = {
   footer: PropTypes.element,
   width: PropTypes.string,
   bottom: PropTypes.bool,
+  isNoMain: PropTypes.bool,
   titlePanel: PropTypes.bool,
   horizontal: PropTypes.bool,
   onClick: PropTypes.func,
