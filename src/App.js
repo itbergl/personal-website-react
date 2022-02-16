@@ -3,28 +3,41 @@ import Content from "./components/Content";
 import React, { useState } from "react";
 import Spotlight from "./components/SubPages/Spotlight";
 
-const bannerHeight = "100px";
+const bannerHeight = "70px";
 
 function App() {
   const [page, setPage] = useState("Home");
   // TODO caching
 
   const [overlay, setOverlay] = useState("hidden");
+  const [spotlightvisible, setspotlightvisible] = useState(false);
 
-  const closeFunc = () => {
-    setOverlay("hidden");
+  const showOverlay = (content) => {
+    setOverlay(content);
+    setspotlightvisible(true);
   };
 
   return (
     <div className="page">
-      <Spotlight content={overlay} closeFunc={closeFunc}></Spotlight>
+      {spotlightvisible ? (
+        <Spotlight
+          content={overlay}
+          closeFunc={setspotlightvisible}
+        ></Spotlight>
+      ) : (
+        <></>
+      )}
       <Banner
         className="banner"
         bannerHeight={bannerHeight}
         selectedPage={page}
         setPage={setPage}
       ></Banner>
-      <Content bannerHeight={bannerHeight} selectedPage={page}></Content>
+      <Content
+        bannerHeight={bannerHeight}
+        selectedPage={page}
+        showOverlay={showOverlay}
+      ></Content>
     </div>
   );
 }

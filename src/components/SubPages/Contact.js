@@ -27,7 +27,11 @@ const Contact = () => {
         <div className="contact-list">
           <Panel
             title={
-              <img src={email} alt="email icon" className="contact-icon"></img>
+              <img
+                src={email}
+                alt="email icon"
+                className="contact-icon icon"
+              ></img>
             }
             content={
               <div className="contact-info">isaac.bergl@outlook.com</div>
@@ -37,7 +41,11 @@ const Contact = () => {
           />
           <Panel
             title={
-              <img src={phone} alt="phone icon" className="contact-icon"></img>
+              <img
+                src={phone}
+                alt="phone icon"
+                className="contact-icon icon"
+              ></img>
             }
             content={<div className="contact-info">+61 43 960 473</div>}
             horizontal={true}
@@ -48,7 +56,7 @@ const Contact = () => {
               <img
                 src={linkedin}
                 alt="linkedin icon"
-                className="contact-icon"
+                className="contact-icon icon"
               ></img>
             }
             content={
@@ -69,7 +77,7 @@ const Contact = () => {
               <img
                 src={github}
                 alt="github icon"
-                className="contact-icon"
+                className="contact-icon icon"
               ></img>
             }
             content={

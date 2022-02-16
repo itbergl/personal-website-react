@@ -1,7 +1,7 @@
 import Panel from "./Panel";
 
 import profilePic from "../../images/profile.jpg";
-
+import React, { useState } from "react";
 import Technology from "./Technology";
 
 const technologies = [
@@ -19,6 +19,8 @@ const technologies = [
 ];
 
 const Home = () => {
+  const [loaded, setLoaded] = useState(false);
+
   return (
     <div>
       <div>
@@ -49,6 +51,8 @@ const Home = () => {
                   alt={"profile"}
                   loading="lazy"
                   className="profile-picture"
+                  onLoad={() => setLoaded(true)}
+                  style={loaded ? {} : { visibility: "hidden" }}
                 ></img>
               </div>
             }

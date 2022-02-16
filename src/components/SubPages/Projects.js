@@ -1,6 +1,6 @@
 import Panel from "./Panel";
 
-const Projects = () => {
+const Projects = ({ showOverlay }) => {
   return (
     <div>
       <div className="title-panel-container">
@@ -30,6 +30,9 @@ const Projects = () => {
               repudiandae temporibus quos animi!
             </div>
           }
+          onClick={() =>
+            showOverlay(<Panel title={<div>Hello There</div>}></Panel>)
+          }
         ></Panel>
         <Panel
           title={<div className="page-title">Projects</div>}
@@ -40,6 +43,9 @@ const Projects = () => {
               Est fuga exercitationem debitis itaque alias adipisci eos
               repudiandae temporibus quos animi!
             </div>
+          }
+          onClick={() =>
+            showOverlay(<Panel title={<div>Hello There</div>}></Panel>)
           }
         ></Panel>
       </div>

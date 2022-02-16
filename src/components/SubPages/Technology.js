@@ -30,6 +30,7 @@ const Technology = ({ name }) => {
       style={{ height: "auto", width: "10%" }}
       src={map[name]}
       alt={name + " icon"}
+      className="icon"
     />
   );
 };

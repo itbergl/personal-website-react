@@ -83,14 +83,11 @@ code {
     margin-left: 15px;
     border-right-style: solid;
     border-right-color: var(--col-background-primary);
-    margin-top: 20px;
-    height: 50px;
+    /* margin-top: 20px; */
+    /* height: 50px; */
 }
 
-.banner-text,
-.banner-text-selected {
-    cursor: pointer;
-    /* supported by Chrome and Opera */
+.unselectable-text {
     user-select: none;
     /* Safari */
     -webkit-user-select: none;
@@ -100,6 +97,11 @@ code {
     -moz-user-select: none;
     /* Internet Explorer/Edge */
     -ms-user-select: none;
+}
+
+.banner-text {
+    cursor: pointer;
+    margin: 0;
 }
 
 .banner-text:hover {
@@ -129,15 +131,35 @@ code {
     height: 100%;
     left: 0;
     top: 0;
-    background: black;
-    opacity: 85%;
+    background: rgba(0, 0, 0, 0.85);
     z-index: 10;
+    padding: 120px 16vw 10vh 16vw;
+    /* overflow: hidden; */
+    /* display: grid; */
+}
+
+.icon {
+    /* user-drag: none; */
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .close-overlay {
-    width: 100px;
-    height: 100px;
-    background-color: aqua;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    left: 105%;
+    top: 70px;
+    margin: auto;
+    text-align: center;
+    filter: brightness(0) invert(1);
+}
+
+.close-overlay:hover {
+    filter: brightness(0) invert(1) drop-shadow(0px 0px 7px rgba(255, 255, 255, 0.5));
 }
 
 .homepage-grid {

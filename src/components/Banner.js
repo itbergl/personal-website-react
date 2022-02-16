@@ -6,22 +6,26 @@ const Header = ({ bannerHeight, selectedPage, setPage }) => {
   return (
     <div style={css} className="banner">
       <div style={{ display: "flex", gap: "0px" }}>
-        <h1
-          className={
-            selectedPage === "Home" ? "banner-text-selected" : "banner-text"
-          }
-          onClick={() => setPage("Home")}
-        >
-          IsaacBergl
-          <span style={{ color: "var(--col-banner-text)" }}>.com</span> software
-          engineering
-        </h1>
+        <div>
+          <h1
+            className={
+              "unselectable-text banner-text " +
+              (selectedPage === "Home" ? "banner-text-selected" : "")
+            }
+            onClick={() => setPage("Home")}
+          >
+            IsaacBergl
+            <span style={{ color: "var(--col-banner-text)" }}>.com</span>{" "}
+            software engineer
+          </h1>
+        </div>
         <div className="banner-line"></div>
       </div>
       <div>
         <h1
           className={
-            selectedPage === "Projects" ? "banner-text-selected" : "banner-text"
+            "unselectable-text banner-text " +
+            (selectedPage === "Projects" ? "banner-text-selected" : "")
           }
           onClick={() => setPage("Projects")}
         >
@@ -31,9 +35,8 @@ const Header = ({ bannerHeight, selectedPage, setPage }) => {
       <div>
         <h1
           className={
-            selectedPage === "Experience"
-              ? "banner-text-selected"
-              : "banner-text"
+            "unselectable-text banner-text " +
+            (selectedPage === "Experience" ? "banner-text-selected" : "")
           }
           onClick={() => setPage("Experience")}
         >
@@ -43,7 +46,8 @@ const Header = ({ bannerHeight, selectedPage, setPage }) => {
       <div>
         <h1
           className={
-            selectedPage === "Contact" ? "banner-text-selected" : "banner-text"
+            "unselectable-text banner-text " +
+            (selectedPage === "Contact" ? "banner-text-selected" : "")
           }
           onClick={() => setPage("Contact")}
         >
