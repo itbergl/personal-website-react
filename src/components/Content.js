@@ -4,13 +4,13 @@ import Experience from "./SubPages/Experience";
 import Contact from "./SubPages/Contact";
 
 //  TODO set min and max sizes for project panels
-const Content = ({ bannerHeight, selectedPage }) => {
+const Content = ({ bannerHeight, selectedPage, showOverlay }) => {
   const getPage = () => {
     switch (selectedPage) {
       case "Home":
         return <Home />;
       case "Projects":
-        return <Projects />;
+        return <Projects showOverlay={showOverlay} />;
       case "Experience":
         return <Experience />;
       case "Contact":

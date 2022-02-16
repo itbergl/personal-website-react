@@ -9,6 +9,7 @@ const Panel = ({
   bottom,
   titlePanel,
   isNoMain,
+  // spotlight,
   horizontal,
   onClick,
 }) => {
@@ -62,7 +63,7 @@ const Panel = ({
       }}
       onClick={onClick}
     >
-      <div className="panel-header" style={cssHeader}>
+      <div className="panel-header unselectable-text" style={cssHeader}>
         {title}
       </div>
       {isNoMain ? (

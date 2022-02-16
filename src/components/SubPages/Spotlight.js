@@ -1,15 +1,17 @@
 import React from "react";
-
+import closeIcon from "../../images/close.png";
 const Spotlight = ({ content, closeFunc }) => {
   return (
     <div>
-      {content !== "hidden" ? (
-        <div className="overlay">
-          <div className="close-overlay" onClick={closeFunc}></div>
-        </div>
-      ) : (
-        <></>
-      )}
+      <div className="overlay">
+        <img
+          src={closeIcon}
+          alt={"close icon"}
+          className="close-overlay"
+          onClick={() => closeFunc(false)}
+        ></img>
+        {content}
+      </div>
     </div>
   );
 };
