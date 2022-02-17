@@ -163,15 +163,23 @@ code {
 }
 
 .homepage-grid {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     padding: 50px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 300px;
+    padding-right: 300px;
     row-gap: 100px;
     column-gap: 50px;
-    grid-template-columns: 3fr 2fr;
-    /* grid-template-rows: repeat(3, 1fr); */
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    /* grid-template-rows: repeat(3, 1fr);1 */
     grid-auto-rows: auto 1fr;
+}
+
+.home-title-display {
+    color: var(--col-banner-text);
+    font-size: 30px;
+    text-align: center;
+    margin: 30vh 25vw 30vh 25vw;
 }
 
 .technology-home-grid {
@@ -225,10 +233,18 @@ code {
 }
 
 .panel-content {
-    text-align: justify;
-    text-justify: inter-word;
-    font-size: 20px;
     text-align: center;
+}
+
+.panel-text {
+    text-align: left;
+    text-justify: inter-word;
+    font-size: 24px;
+}
+
+.panel-padding {
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .title-panel-container {
