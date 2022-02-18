@@ -1,7 +1,5 @@
 import Panel from "./Panel";
 
-import profilePic from "../../images/profile.jpg";
-import React, { useState } from "react";
 import Technology from "./Technology";
 import piderman from "../../images/piderman.gif";
 
@@ -21,20 +19,7 @@ const technologies = [
   "azure",
 ];
 
-{
-  /* <img
-  src={profilePic}
-  alt={"profile"}
-  loading="lazy"
-  className="profile-picture"
-  onLoad={() => setLoaded(true)}
-  style={loaded ? {} : { visibility: "hidden" }}
-></img> */
-}
-
 const Home = () => {
-  // const [loaded, setLoaded] = useState(false);
-
   return (
     <div>
       <div>
@@ -73,7 +58,7 @@ const Home = () => {
                 </div>
               }
               bottom={false}
-              titlePanel={true}
+              titlePanel
             />
           </div>
           <div style={{ gridRow: "1/2", gridColumn: "3/5" }}>
@@ -86,7 +71,7 @@ const Home = () => {
               content={
                 <div className="technology-home-grid">
                   {technologies.map((tech) => (
-                    <Technology key={tech} name={tech} />
+                    <Technology key={tech} height="70px" name={tech} />
                   ))}
                 </div>
               }
@@ -179,13 +164,16 @@ const Home = () => {
             title={<div className="page-title">About this website</div>}
             bottom={false}
             content={
-              <div className="panel-text panel-padding">
+              <div
+                className="panel-text panel-padding"
+                style={{ textAlign: "center" }}
+              >
                 <p>
                   This webpage was built using react.js: a javaScript framework
                   for building interactive web applications. This was my first
                   time using this framework.
                 </p>
-                <p style={{ textAlign: "center" }}>
+                <p>
                   You can check out the source code{" "}
                   <a href="https://github.com/itbergl/personal-website-react">
                     here
@@ -195,9 +183,7 @@ const Home = () => {
                 <div style={{ left: "50%", margin: "auto", width: "200px" }}>
                   <img src={piderman} alt="this slowpoke moves" width="200" />
                 </div>
-                <p style={{ textAlign: "center" }}>
-                  Above is a gif of Spiderman dancing.
-                </p>
+                <p>Above is a gif of Spiderman dancing.</p>
               </div>
             }
           />

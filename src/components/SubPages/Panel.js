@@ -5,14 +5,17 @@ const Panel = ({
   title,
   content,
   footer,
-  width,
   bottom,
+  width,
+  maxHeight,
   titlePanel,
+  mainPadding,
   isNoMain,
   bannerColor,
   mainColor,
   horizontal,
   onClick,
+  scrollable,
 }) => {
   const radius = "20px";
 
@@ -51,6 +54,10 @@ const Panel = ({
     cssHeader.alignContent = "center";
   }
 
+  if (scrollable) {
+    cssMain.overflowY = "scroll";
+  }
+
   cssHeader.backgroundColor = bannerColor;
   cssMain.backgroundColor = mainColor;
   cssFooter.backgroundColor = bannerColor;
@@ -60,6 +67,7 @@ const Panel = ({
       className={"panel" + (onClick === null ? "" : " clickable")}
       style={{
         width: width,
+        height: maxHeight,
         margin: "auto",
         flexDirection: horizontal ? "row" : "column",
       }}
@@ -72,7 +80,7 @@ const Panel = ({
         <></>
       ) : (
         <div style={cssMain}>
-          <div style={{ padding: radius, height: "100%" }}>{content}</div>
+          <div style={{ padding: mainPadding ? radius : 0 }}>{content}</div>
         </div>
       )}
       {bottom ? <div style={cssFooter}> {footer}</div> : null}
@@ -88,10 +96,13 @@ Panel.defaultProps = {
   bottom: true,
   bannerColor: "var(--col-box-primary)",
   mainColor: "var(--col-box-secondary)",
+  maxHeight: "auto",
+  mainPadding: true,
   isNoMain: false,
   titlePanel: false,
   horizontal: false,
   onClick: null,
+  scrollable: false,
 };
 
 Panel.propTypes = {
@@ -103,9 +114,12 @@ Panel.propTypes = {
   bannerColor: PropTypes.string,
   mainColor: PropTypes.string,
   isNoMain: PropTypes.bool,
+  mainPadding: PropTypes.bool,
   titlePanel: PropTypes.bool,
   horizontal: PropTypes.bool,
   onClick: PropTypes.func,
+  scrollable: PropTypes.bool,
+  maxHeight: PropTypes.string,
 };
 
 export default Panel;
