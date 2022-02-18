@@ -9,7 +9,8 @@ const Panel = ({
   bottom,
   titlePanel,
   isNoMain,
-  // spotlight,
+  bannerColor,
+  mainColor,
   horizontal,
   onClick,
 }) => {
@@ -46,16 +47,17 @@ const Panel = ({
 
   // this probably isn't best practice
   if (titlePanel) {
-    cssFooter.backgroundColor = "var(--col-primary)";
-    cssHeader.backgroundColor = "var( --col-primary)";
-    cssMain.backgroundColor = "var(--col-box-secondary)";
     cssHeader.paddingBottom = radius;
     cssHeader.alignContent = "center";
   }
 
+  cssHeader.backgroundColor = bannerColor;
+  cssMain.backgroundColor = mainColor;
+  cssFooter.backgroundColor = bannerColor;
+
   return (
     <div
-      className="panel"
+      className={"panel" + (onClick === null ? "" : " clickable")}
       style={{
         width: width,
         margin: "auto",
@@ -63,22 +65,17 @@ const Panel = ({
       }}
       onClick={onClick}
     >
-      <div className="panel-header unselectable-text" style={cssHeader}>
+      <div className="unselectable-text" style={cssHeader}>
         {title}
       </div>
       {isNoMain ? (
         <></>
       ) : (
-        <div className="panel-content" style={cssMain}>
+        <div style={cssMain}>
           <div style={{ padding: radius, height: "100%" }}>{content}</div>
         </div>
       )}
-      {bottom ? (
-        <div className="panel-footer" style={cssFooter}>
-          {" "}
-          {footer}
-        </div>
-      ) : null}
+      {bottom ? <div style={cssFooter}> {footer}</div> : null}
     </div>
   );
 };
@@ -89,6 +86,8 @@ Panel.defaultProps = {
   footer: <></>,
   width: "100%",
   bottom: true,
+  bannerColor: "var(--col-box-primary)",
+  mainColor: "var(--col-box-secondary)",
   isNoMain: false,
   titlePanel: false,
   horizontal: false,
@@ -101,6 +100,8 @@ Panel.propTypes = {
   footer: PropTypes.element,
   width: PropTypes.string,
   bottom: PropTypes.bool,
+  bannerColor: PropTypes.string,
+  mainColor: PropTypes.string,
   isNoMain: PropTypes.bool,
   titlePanel: PropTypes.bool,
   horizontal: PropTypes.bool,

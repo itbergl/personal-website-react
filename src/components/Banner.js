@@ -8,10 +8,7 @@ const Header = ({ bannerHeight, selectedPage, setPage }) => {
       <div style={{ display: "flex", gap: "0px" }}>
         <div>
           <h1
-            className={
-              "unselectable-text banner-text " +
-              (selectedPage === "Home" ? "banner-text-selected" : "")
-            }
+            className="unselectable-text banner-text banner-text-selected"
             onClick={() => setPage("Home")}
           >
             IsaacBergl
@@ -20,6 +17,18 @@ const Header = ({ bannerHeight, selectedPage, setPage }) => {
           </h1>
         </div>
         <div className="banner-line"></div>
+      </div>
+
+      <div>
+        <h1
+          className={
+            "unselectable-text banner-text " +
+            (selectedPage === "Home" ? "banner-text-selected" : "")
+          }
+          onClick={() => setPage("Home")}
+        >
+          home
+        </h1>
       </div>
       <div>
         <h1
@@ -30,17 +39,6 @@ const Header = ({ bannerHeight, selectedPage, setPage }) => {
           onClick={() => setPage("Projects")}
         >
           projects
-        </h1>
-      </div>
-      <div>
-        <h1
-          className={
-            "unselectable-text banner-text " +
-            (selectedPage === "Experience" ? "banner-text-selected" : "")
-          }
-          onClick={() => setPage("Experience")}
-        >
-          experience
         </h1>
       </div>
       <div>

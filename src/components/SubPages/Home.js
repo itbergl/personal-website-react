@@ -5,6 +5,8 @@ import React, { useState } from "react";
 import Technology from "./Technology";
 import piderman from "../../images/piderman.gif";
 
+import Experience from "./Experience";
+
 const technologies = [
   "python",
   "javascript",
@@ -43,6 +45,7 @@ const Home = () => {
         <div className="homepage-grid">
           <div style={{ gridRow: "1/2", gridColumn: "1/3" }}>
             <Panel
+              bannerColor="var(--col-primary)"
               title={<div className="page-title">About Me</div>}
               content={
                 <div style={{ display: "flex", columnGap: "30px" }}>
@@ -74,35 +77,11 @@ const Home = () => {
             />
           </div>
           <div style={{ gridRow: "1/2", gridColumn: "3/5" }}>
-            <Panel
-              title={<div className="page-title">Experience</div>}
-              content={
-                <div className="panel-text panel-padding">
-                  <p>
-                    I have completed a software engineering internship with
-                    Chevron in 2022, where I gained exposure to cloud
-                    engineering using Azure. The program was 12 weeks and I
-                    gained many skills such as communication, working with a
-                    large team and working on an agile project.
-                  </p>
-                  <p>
-                    Additionally I did a research project with Dr Zeyi Wen about
-                    the robustness of decision tree based machine learning
-                    models, looking at the model's effectiveness when presented
-                    with intentionally altered images. You can read my
-                    literature review here.
-                  </p>
-                  <p>
-                    I do coding projects in my spare time, which you can check
-                    out here!
-                  </p>
-                </div>
-              }
-              bottom={false}
-            />
+            <Experience></Experience>
           </div>
           <div style={{ gridRow: "2/3", gridColumn: "2/4" }}>
             <Panel
+              bannerColor="var(--col-primary)"
               title={<div className="page-title">Technical Skills</div>}
               content={
                 <div className="technology-home-grid">
@@ -117,6 +96,7 @@ const Home = () => {
 
           <div style={{ gridRow: "3/4", gridColumn: "2/4" }}>
             <Panel
+              bannerColor="var(--col-primary)"
               title={<div className="page-title">Education</div>}
               content={
                 <div className="panel-text panel-padding">
@@ -201,15 +181,16 @@ const Home = () => {
             content={
               <div className="panel-text panel-padding">
                 <p>
-                  This webpage was built using react.js a framework for
-                  interactive web applications. This was my first time using
-                  this framework.
+                  This webpage was built using react.js: a javaScript framework
+                  for building interactive web applications. This was my first
+                  time using this framework.
                 </p>
-                <p>
+                <p style={{ textAlign: "center" }}>
                   You can check out the source code{" "}
                   <a href="https://github.com/itbergl/personal-website-react">
                     here
                   </a>
+                  .
                 </p>
                 <div style={{ left: "50%", margin: "auto", width: "200px" }}>
                   <img src={piderman} alt="this slowpoke moves" width="200" />
