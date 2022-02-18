@@ -219,14 +219,6 @@ code {
     cursor: pointer;
 }
 
-.panel-header {
-    /* background-color: var(--col-box-primary); */
-}
-
-.panel-content {
-    /* background-color: var(--col-box-secondary); */
-}
-
 .panel-footer {
     background-color: var(--col-box-primary);
 }
@@ -259,7 +251,7 @@ code {
 
 .contact-list {
     display: flex;
-    width: auto;
+    width: 500px;
     margin: auto;
     flex-direction: column;
     row-gap: 40px;
@@ -267,19 +259,21 @@ code {
     /* padding-left: 15%;
     padding-right: 15%; */
     padding-top: 6%;
-    width: 20vw;
+    /* width: 20vw; */
 }
 
 .contact-icon {
-    width: 50px;
     text-align: center;
+    width: 50px;
     filter: brightness(0) invert(1);
 }
 
 .contact-info {
-    display: table-cell;
-    text-align: center;
+    /* display: table-cell; */
+    margin-top: 10px;
+    margin-bottom: 10px;
     vertical-align: middle;
+    text-align: center;
     font-size: 22px;
 }
 
@@ -308,8 +302,8 @@ body {
     display: flex;
     flex-direction: column;
     row-gap: 50px;
-    height: 50vh;
-    overflow-y: scroll;
+    /* height: 50vh; */
+    /* overflow-y: scroll; */
 }
 
 
@@ -321,10 +315,10 @@ body {
     width: 6px;
     background-color: var(--col-primary);
     left: 50%;
-    transform: translate(-8px);
+    /* transform: translate(-8px); */
     margin-left: -3px;
     z-index: 1;
-    height: 516px;
+    height: 100%;
 }
 
 

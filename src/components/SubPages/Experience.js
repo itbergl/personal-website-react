@@ -4,6 +4,9 @@ const Experience = () => {
   return (
     <Panel
       bannerColor="var(--col-primary)"
+      mainPadding={false}
+      scrollable
+      maxHeight={"50vh"}
       title={<div className="page-title">Experience</div>}
       content={
         <div>

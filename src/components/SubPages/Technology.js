@@ -10,7 +10,7 @@ import javascript from "../../images/javascript.svg";
 import react from "../../images/react.svg";
 import unity from "../../images/unity.svg";
 
-const Technology = ({ name }) => {
+const Technology = ({ name, height }) => {
   const map = {
     java: java,
     python: python,
@@ -28,7 +28,7 @@ const Technology = ({ name }) => {
   return (
     <div>
       <img
-        style={{ height: "100px" }}
+        style={{ height: height }}
         src={map[name]}
         alt={name + " icon"}
         className="icon"

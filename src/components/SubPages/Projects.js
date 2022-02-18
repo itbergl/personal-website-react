@@ -5,7 +5,8 @@ const Projects = ({ showOverlay }) => {
     <div>
       <div className="title-panel-container">
         <Panel
-          titlePanel={true}
+          titlePanel
+          bannerColor="var(--col-primary)"
           title={<div className="page-title">Projects</div>}
           content={
             <div className="panel-text">
