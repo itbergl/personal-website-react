@@ -26,12 +26,15 @@ const Technology = ({ name }) => {
   };
 
   return (
-    <img
-      style={{ height: "auto", width: "10%" }}
-      src={map[name]}
-      alt={name + " icon"}
-      className="icon"
-    />
+    <div>
+      <img
+        style={{ height: "100px" }}
+        src={map[name]}
+        alt={name + " icon"}
+        className="icon"
+      />
+      <p style={{ textAlign: "center" }}>{name}</p>
+    </div>
   );
 };
 
