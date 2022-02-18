@@ -10,8 +10,8 @@ const Experience = () => {
       title={<div className="page-title">Experience</div>}
       content={
         <div>
-          <div className="timeline-line"></div>
           <div className="timeline">
+            <div className="timeline-line"></div>
             <div className="year-label">
               <h3>Today</h3>
             </div>
