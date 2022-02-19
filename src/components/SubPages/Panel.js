@@ -2,17 +2,15 @@ import PropTypes from "prop-types";
 
 // maybe remove width
 const Panel = ({
+  children,
   title,
-  content,
   footer,
-  bottom,
   width,
-  maxHeight,
-  titlePanel,
-  mainPadding,
-  isNoMain,
+  height,
   bannerColor,
   mainColor,
+  titlePanel,
+  padMain,
   horizontal,
   onClick,
   scrollable,
@@ -67,7 +65,7 @@ const Panel = ({
       className={"panel" + (onClick === null ? "" : " clickable")}
       style={{
         width: width,
-        height: maxHeight,
+        height: height,
         margin: "auto",
         flexDirection: horizontal ? "row" : "column",
       }}
@@ -76,29 +74,22 @@ const Panel = ({
       <div className="unselectable-text" style={cssHeader}>
         {title}
       </div>
-      {isNoMain ? (
-        <></>
-      ) : (
-        <div style={cssMain}>
-          <div style={{ padding: mainPadding ? radius : 0 }}>{content}</div>
-        </div>
-      )}
-      {bottom ? <div style={cssFooter}> {footer}</div> : null}
+      <div style={cssMain}>
+        <div style={{ padding: padMain ? radius : 0 }}>{children}</div>
+      </div>
+      {footer ? <div style={cssFooter}> {footer}</div> : null}
     </div>
   );
 };
 
 Panel.defaultProps = {
   title: <></>,
-  content: <></>,
-  footer: <></>,
+  footer: undefined,
   width: "100%",
-  bottom: true,
   bannerColor: "var(--col-box-primary)",
   mainColor: "var(--col-box-secondary)",
-  maxHeight: "auto",
-  mainPadding: true,
-  isNoMain: false,
+  height: "auto",
+  padMain: true,
   titlePanel: false,
   horizontal: false,
   onClick: null,
@@ -107,19 +98,16 @@ Panel.defaultProps = {
 
 Panel.propTypes = {
   title: PropTypes.element,
-  content: PropTypes.element,
-  footer: PropTypes.element,
+  // footer: PropTypes.element,
   width: PropTypes.string,
-  bottom: PropTypes.bool,
   bannerColor: PropTypes.string,
   mainColor: PropTypes.string,
-  isNoMain: PropTypes.bool,
-  mainPadding: PropTypes.bool,
+  padMain: PropTypes.bool,
   titlePanel: PropTypes.bool,
   horizontal: PropTypes.bool,
   onClick: PropTypes.func,
   scrollable: PropTypes.bool,
-  maxHeight: PropTypes.string,
+  height: PropTypes.string,
 };
 
 export default Panel;
