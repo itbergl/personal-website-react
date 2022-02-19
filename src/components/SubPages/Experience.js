@@ -14,7 +14,6 @@ const Experience = () => {
             bannerColor="var(--col-primary)"
             mainColor="var(--col-box-primary)"
             title={<div>Chevron</div>}
-            bottom={false}
           >
             {" "}
             <div>
@@ -31,7 +30,6 @@ const Experience = () => {
             bannerColor="var(--col-primary)"
             mainColor="var(--col-box-primary)"
             title={<div>Chevron</div>}
-            bottom={false}
           >
             {" "}
             <div>
@@ -52,7 +50,6 @@ const Experience = () => {
             bannerColor="var(--col-primary)"
             mainColor="var(--col-box-primary)"
             title={<div>Chevron</div>}
-            bottom={false}
           >
             {" "}
             <div>
@@ -69,7 +66,6 @@ const Experience = () => {
             bannerColor="var(--col-primary)"
             mainColor="var(--col-box-primary)"
             title={<div>Chevron</div>}
-            bottom={false}
           >
             {" "}
             <div>
