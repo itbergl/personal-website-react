@@ -22,15 +22,15 @@ const Contact = () => {
               className="contact-icon icon"
             ></img>
           }
-          content={
-            <div style={{ width: colWidth }}>
-              <h3 className="contact-info">isaac.bergl@outlook.com</h3>
-            </div>
-          }
           horizontal
           footer={<div className="contact-icon icon"></div>}
           // bottom={false}
-        />
+        >
+          {" "}
+          <div style={{ width: colWidth }}>
+            <h3 className="contact-info">isaac.bergl@outlook.com</h3>
+          </div>
+        </Panel>
         <Panel
           width={colWidth}
           title={
@@ -40,15 +40,15 @@ const Contact = () => {
               className="contact-icon icon"
             ></img>
           }
-          content={
-            <div style={{ width: colWidth }}>
-              <h3 className="contact-info">+61 43 960 473</h3>
-            </div>
-          }
           horizontal
           footer={<div className="contact-icon icon"></div>}
           // bottom={false}
-        />
+        >
+          {" "}
+          <div style={{ width: colWidth }}>
+            <h3 className="contact-info">+61 43 960 473</h3>
+          </div>
+        </Panel>
         <Panel
           width={colWidth}
           title={
@@ -58,19 +58,18 @@ const Contact = () => {
               className="contact-icon icon"
             ></img>
           }
-          content={
-            <div style={{ width: colWidth }}>
-              <h3 className="contact-info external-link">
-                <a href={"https://www.linkedin.com/in/isaac-bergl-2531b81b5/"}>
-                  my LinkedIn profile
-                </a>
-              </h3>
-            </div>
-          }
           horizontal
           footer={<div className="contact-icon icon"></div>}
           // bottom={false}
-        />
+        >
+          <div style={{ width: colWidth }}>
+            <h3 className="contact-info external-link">
+              <a href={"https://www.linkedin.com/in/isaac-bergl-2531b81b5/"}>
+                my LinkedIn profile
+              </a>
+            </h3>
+          </div>
+        </Panel>
         <Panel
           width={colWidth}
           title={
@@ -80,17 +79,16 @@ const Contact = () => {
               className="contact-icon icon"
             ></img>
           }
-          content={
-            <div style={{ width: colWidth }}>
-              <h3 className="contact-info external-link">
-                <a href={"https://github.com/itbergl"}> my github profile</a>
-              </h3>
-            </div>
-          }
           horizontal
           footer={<div className="contact-icon icon"></div>}
           // bottom={false}
-        />
+        >
+          <div style={{ width: colWidth }}>
+            <h3 className="contact-info external-link">
+              <a href={"https://github.com/itbergl"}> my github profile</a>
+            </h3>
+          </div>
+        </Panel>
       </div>
     </div>
   );
