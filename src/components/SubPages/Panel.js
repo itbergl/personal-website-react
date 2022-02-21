@@ -62,7 +62,7 @@ const Panel = ({
 
   return (
     <div
-      className={"panel" + (onClick === null ? "" : " clickable")}
+      className={"panel" + (onClick ? " clickable" : "")}
       style={{
         width: width,
         height: height,
@@ -83,30 +83,18 @@ const Panel = ({
 };
 
 Panel.defaultProps = {
-  title: <></>,
-  footer: undefined,
   width: "100%",
   bannerColor: "var(--col-box-primary)",
   mainColor: "var(--col-box-secondary)",
   height: "auto",
-  padMain: true,
-  titlePanel: false,
-  horizontal: false,
-  onClick: null,
-  scrollable: false,
 };
 
 Panel.propTypes = {
   title: PropTypes.element,
-  // footer: PropTypes.element,
   width: PropTypes.string,
   bannerColor: PropTypes.string,
   mainColor: PropTypes.string,
-  padMain: PropTypes.bool,
-  titlePanel: PropTypes.bool,
-  horizontal: PropTypes.bool,
   onClick: PropTypes.func,
-  scrollable: PropTypes.bool,
   height: PropTypes.string,
 };
 

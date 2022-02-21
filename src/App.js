@@ -24,9 +24,7 @@ function App() {
           content={overlay}
           closeFunc={setspotlightvisible}
         ></Spotlight>
-      ) : (
-        <></>
-      )}
+      ) : null}
       <Banner
         className="banner"
         bannerHeight={bannerHeight}
