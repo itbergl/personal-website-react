@@ -2,7 +2,6 @@ const Header = ({ bannerHeight, selectedPage, setPage }) => {
   const css = {
     height: bannerHeight,
   };
-
   return (
     <div style={css} className="banner">
       <div style={{ display: "flex", gap: "0px" }}>
@@ -18,7 +17,6 @@ const Header = ({ bannerHeight, selectedPage, setPage }) => {
         </div>
         <div className="banner-line"></div>
       </div>
-
       <div>
         <h1
           className={

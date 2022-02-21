@@ -62,7 +62,7 @@ const Panel = ({
 
   return (
     <div
-      className={"panel" + (onClick === null ? "" : " clickable")}
+      className={"panel" + (onClick ? " clickable" : "")}
       style={{
         width: width,
         height: height,
