@@ -277,8 +277,8 @@ const Home = () => {
                           }}
                         >
                           <img
-                            src={uwa}
-                            alt="uwa logo"
+                            src={cshs}
+                            alt="cshs logo"
                             style={{
                               objectFit: "contain",
                               width: "100px",
