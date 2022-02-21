@@ -24,7 +24,6 @@ const Contact = () => {
           }
           horizontal
           footer={<div className="contact-icon icon"></div>}
-          // bottom={false}
         >
           {" "}
           <div style={{ width: colWidth }}>
@@ -42,7 +41,6 @@ const Contact = () => {
           }
           horizontal
           footer={<div className="contact-icon icon"></div>}
-          // bottom={false}
         >
           {" "}
           <div style={{ width: colWidth }}>
@@ -60,7 +58,6 @@ const Contact = () => {
           }
           horizontal
           footer={<div className="contact-icon icon"></div>}
-          // bottom={false}
         >
           <div style={{ width: colWidth }}>
             <h3 className="contact-info external-link">
@@ -81,7 +78,6 @@ const Contact = () => {
           }
           horizontal
           footer={<div className="contact-icon icon"></div>}
-          // bottom={false}
         >
           <div style={{ width: colWidth }}>
             <h3 className="contact-info external-link">

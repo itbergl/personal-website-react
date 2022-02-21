@@ -192,6 +192,20 @@ code {
     /* grid-template-rows: repeat(3, 1fr); */
 }
 
+li:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.subject {
+    background-color: var(--col-box-primary);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.subject>h4 {
+    font-size: 15px;
+}
+
 .profile-picture {
     align-self: center;
     width: 250px;

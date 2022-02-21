@@ -8,7 +8,7 @@ const Projects = ({ showOverlay }) => {
           titlePanel
           bannerColor="var(--col-primary)"
           title={<div className="page-title">Projects</div>}
-          bottom={false}
+
           // change this
         >
           <div className="panel-text">
