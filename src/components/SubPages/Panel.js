@@ -43,7 +43,7 @@ const Panel = ({
         paddingTop: 0,
       };
 
-  cssFooter.padding = radius;
+  // cssFooter.padding = radius;
   cssHeader.padding = radius;
 
   // this probably isn't best practice
