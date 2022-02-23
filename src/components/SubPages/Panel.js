@@ -36,9 +36,10 @@ const Panel = ({
   css.margin = "auto";
   css.flexDirection = horizontal ? "row" : "column";
   css.overflow = "hidden";
+  css["boxShadow"] = "var(--shadow)";
 
-  const cssHeader = {};
-  const cssFooter = {};
+  const cssHeader = { backgroundColor: bannerColor };
+  const cssFooter = { backgroundColor: bannerColor };
   cssHeader.padding = radius;
 
   // this probably isn't best practice
@@ -46,12 +47,6 @@ const Panel = ({
     cssHeader.paddingBottom = radius;
     cssHeader.alignContent = "center";
   }
-
-  if (scrollable) {
-  }
-
-  cssHeader.backgroundColor = bannerColor;
-  cssFooter.backgroundColor = bannerColor;
 
   return (
     <div
@@ -67,6 +62,7 @@ const Panel = ({
           backgroundColor: mainColor,
           overflowY: scrollable ? "scrollable" : "",
           padding: padMain ? radius : 0,
+          width: "100%",
         }}
       >
         {children}
