@@ -17,33 +17,28 @@ const Panel = ({
 }) => {
   const radius = "20px";
 
-  const cssMain = {
-    width: "100%",
-  };
-
-  const cssHeader = horizontal
+  const css = horizontal
     ? {
+        borderTopRightRadius: footer ? radius : "",
+        borderBottomRightRadius: footer ? radius : "",
         borderTopLeftRadius: radius,
         borderBottomLeftRadius: radius,
-        paddingRight: 0,
-      }
-    : { borderTopLeftRadius: radius, borderTopRightRadius: radius };
-
-  const cssFooter = horizontal
-    ? {
-        borderTopRightRadius: radius,
-        borderBottomRightRadius: radius,
-        paddingLeft: 0,
-        paddingRight: 0,
       }
     : {
-        borderBottomLeftRadius: radius,
-        borderBottomRightRadius: radius,
-        paddingBottom: 0,
-        paddingTop: 0,
+        borderTopRightRadius: radius,
+        borderBottomRightRadius: footer ? radius : "",
+        borderTopLeftRadius: radius,
+        borderBottomLeftRadius: footer ? radius : "",
       };
 
-  // cssFooter.padding = radius;
+  css.width = width;
+  css.height = height;
+  css.margin = "auto";
+  css.flexDirection = horizontal ? "row" : "column";
+  css.overflow = "hidden";
+
+  const cssHeader = {};
+  const cssFooter = {};
   cssHeader.padding = radius;
 
   // this probably isn't best practice
@@ -53,30 +48,30 @@ const Panel = ({
   }
 
   if (scrollable) {
-    cssMain.overflowY = "scroll";
   }
 
   cssHeader.backgroundColor = bannerColor;
-  cssMain.backgroundColor = mainColor;
   cssFooter.backgroundColor = bannerColor;
 
   return (
     <div
       className={"panel" + (onClick ? " clickable" : "")}
-      style={{
-        width: width,
-        height: height,
-        margin: "auto",
-        flexDirection: horizontal ? "row" : "column",
-      }}
+      style={css}
       onClick={onClick}
     >
       <div className="unselectable-text" style={cssHeader}>
         {title}
       </div>
-      <div style={cssMain}>
-        <div style={{ padding: padMain ? radius : 0 }}>{children}</div>
+      <div
+        style={{
+          backgroundColor: mainColor,
+          overflowY: scrollable ? "scrollable" : "",
+          padding: padMain ? radius : 0,
+        }}
+      >
+        {children}
       </div>
+
       {footer ? <div style={cssFooter}> {footer}</div> : null}
     </div>
   );

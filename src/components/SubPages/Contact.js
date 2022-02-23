@@ -81,7 +81,6 @@ const Contact = () => {
           }
           horizontal
           footer={<div className="contact-icon icon"></div>}
-          //
         >
           <div style={{ width: colWidth }}>
             <h3 className="contact-info external-link">
