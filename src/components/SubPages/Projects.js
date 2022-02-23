@@ -1,4 +1,5 @@
 import Panel from "./Panel";
+import Project from "./Project";
 
 const Projects = ({ showOverlay }) => {
   return (
@@ -8,48 +9,89 @@ const Projects = ({ showOverlay }) => {
           titlePanel
           bannerColor="var(--col-primary)"
           title={<div className="page-title">Projects</div>}
-          bottom={false}
-          // change this
         >
-          <div className="panel-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-            quod incidunt facere optio! Exercitationem libero eos corporis at.
-            Est fuga exercitationem debitis itaque alias adipisci eos
-            repudiandae temporibus quos animi!
+          <div className="panel-text" style={{ textAlign: "center" }}>
+            Here's a list of all my projects. Click on the GitHub icon to view
+            each repository.
           </div>
         </Panel>
       </div>
       <div className="panel-grid">
-        <Panel
-          title={<div className="page-title">Projects</div>}
-          footer
-          onClick={() =>
-            showOverlay(<Panel title={<div>Hello There</div>}></Panel>)
-          }
+        <Project
+          name="Pathfinder"
+          technologies={["python"]}
+          repo="https://github.com/itbergl/pathfinding"
         >
-          {" "}
-          <div className="panel-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-            quod incidunt facere optio! Exercitationem libero eos corporis at.
-            Est fuga exercitationem debitis itaque alias adipisci eos
-            repudiandae temporibus quos animi!
-          </div>
-        </Panel>
-        <Panel
-          title={<div className="page-title">Projects</div>}
-          footer
-          onClick={() =>
-            showOverlay(<Panel title={<div>Hello There</div>}></Panel>)
-          }
+          A visual implementation of A* pathfinding, an informed search
+          algorithm for finding the shortest path between two nodes of a
+          weighted graph. It also includes an interactive map canvas.
+        </Project>
+
+        <Project
+          name="Sodoku Solver"
+          technologies={["python"]}
+          repo="https://github.com/itbergl/sodoku"
         >
-          {" "}
-          <div className="panel-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-            quod incidunt facere optio! Exercitationem libero eos corporis at.
-            Est fuga exercitationem debitis itaque alias adipisci eos
-            repudiandae temporibus quos animi!
-          </div>
-        </Panel>
+          Created a sodoku player with a solver that utilises a recursive
+          backtracking algorithm to demonstrate visually how such an algorithm
+          works.
+        </Project>
+        <Project
+          name="Terminal Donut"
+          technologies={["c"]}
+          repo="https://github.com/itbergl/terminal-donut"
+        >
+          Created a C program that simulates a 3D rotating donut and displays a
+          rendering to the terminal usinh ASCII symbols to represent brightness.
+        </Project>
+
+        <Project
+          name="Particle Simulator"
+          technologies={["csharp", "unity"]}
+          repo="https://github.com/SmallMolecules/small-molecules"
+        >
+          Created a 3D particle simulator that can simulate 100s of particles in
+          an interactive Unity environment for mixed reality application. Gave
+          developers the framework to implement their own collision event
+          handling and custom force fields.
+        </Project>
+
+        <Project
+          name="Wood Hackathon"
+          technologies={["javascript", "html5", "css"]}
+          repo="https://github.com/cookies-xor-cream/wood-hackathon-2021 "
+        >
+          Won first place in a Hackathon by engineering consulting company Wood.
+          Worked in a team of 4 to create an interactive web app in 24 hours
+          that can help drive decisions about carbon emissions.
+        </Project>
+        <Project
+          name="Poker Pot Cacluator"
+          technologies={["javascript", "html5", "css"]}
+          repo="https://github.com/itbergl/pot-splitter-web"
+        >
+          Made a website for calculating the results of a poker hand, and how a
+          pot should be split when there is complicated betting.
+        </Project>
+        <Project
+          name="3D Boids"
+          technologies={["python"]}
+          repo="https://github.com/itbergl/swarm"
+        >
+          Created a 3D boid simulator according to [this paper] by PERSON. The
+          purpose of this paper was to model the behaviour of swarming animals
+          like fish, birds and insects using a simple set of rules for each
+          creature.
+        </Project>
+        <Project
+          name="Personal Website"
+          technologies={["javascript", "react", "html5", "css"]}
+          repo="https://github.com/itbergl/personal-website-react"
+        >
+          This website was made using React - a powerful Javascript library for
+          creating interactive front end websites. This was my first time using
+          this framework.
+        </Project>
       </div>
     </div>
   );

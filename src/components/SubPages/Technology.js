@@ -10,7 +10,7 @@ import javascript from "../../images/javascript.svg";
 import react from "../../images/react.svg";
 import unity from "../../images/unity.svg";
 
-const Technology = ({ children, name, height }) => {
+const Technology = ({ children, name, height, label }) => {
   const map = {
     java: java,
     python: python,
@@ -34,7 +34,7 @@ const Technology = ({ children, name, height }) => {
         className="icon"
       />
       {children}
-      <p style={{ textAlign: "center" }}>{name}</p>
+      {label ? <p style={{ textAlign: "center" }}>{name}</p> : null}
     </div>
   );
 };

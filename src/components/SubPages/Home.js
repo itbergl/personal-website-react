@@ -75,7 +75,12 @@ const Home = () => {
             >
               <div className="technology-home-grid">
                 {technologies.map((tech) => (
-                  <Technology key={tech} height="70px" name={tech}></Technology>
+                  <Technology
+                    key={tech}
+                    label
+                    height="70px"
+                    name={tech}
+                  ></Technology>
                 ))}
               </div>
             </Panel>
