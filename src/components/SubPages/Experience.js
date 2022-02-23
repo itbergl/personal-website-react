@@ -1,4 +1,4 @@
-import Panel from "./Panel";
+// import Panel from "./Panel";
 import TimelineEvent from "./TimelineEvent";
 
 const Experience = () => {
@@ -14,9 +14,7 @@ const Experience = () => {
     <div>
       <div className="timeline">
         <div className="timeline-line"></div>
-        <div className="year-label">
-          <h3>Today</h3>
-        </div>
+        {year("Today")}
         <TimelineEvent title={<div>Started JB HIFI</div>}>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus
           eligendi ab, enim eveniet atque, hic magnam voluptatibus non excepturi

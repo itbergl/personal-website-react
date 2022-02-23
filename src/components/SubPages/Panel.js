@@ -16,7 +16,6 @@ const Panel = ({
   scrollable,
 }) => {
   const radius = "20px";
-
   const css = horizontal
     ? {
         borderTopRightRadius: footer ? radius : "",
@@ -32,6 +31,7 @@ const Panel = ({
       };
 
   css.width = width;
+  //
   css.height = height;
   css.margin = "auto";
   css.flexDirection = horizontal ? "row" : "column";
@@ -54,15 +54,16 @@ const Panel = ({
       style={css}
       onClick={onClick}
     >
-      <div className="unselectable-text" style={cssHeader}>
+      <div className="unselectable-text title-text" style={cssHeader}>
         {title}
       </div>
       <div
         style={{
           backgroundColor: mainColor,
-          overflowY: scrollable ? "scrollable" : "",
+          overflowY: scrollable ? "scroll" : "",
           padding: padMain ? radius : 0,
           width: "100%",
+          height: horizontal ? "" : "100%",
         }}
       >
         {children}
@@ -79,7 +80,7 @@ Panel.defaultProps = {
   width: "100%",
   bannerColor: "var(--col-box-primary)",
   mainColor: "var(--col-box-secondary)",
-  height: "auto",
+  height: "100%",
   padMain: true,
   titlePanel: false,
   horizontal: false,

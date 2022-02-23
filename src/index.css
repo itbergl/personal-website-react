@@ -1,18 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 :root {
     --col-primary: #73264d;
-    --col-background-primary: #1e0c15;
+    --col-background-primary: #2c0d1d;
     --col-background-secondary: #262626;
     --col-selected-text: white;
     --col-banner-text: #d682ac;
-    --col-box-primary: #202020;
-    --col-box-secondary: #0c0c0c;
-    --col-regular-text: rgb(182, 181, 181);
+    --col-box-primary: #222222;
+    --col-box-secondary: #141414;
+    --col-regular-text: #b6b5b5;
     --shadow: 0px 1px 40px black;
 }
 
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-family: "Poppins", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     height: 100%;
@@ -20,7 +21,7 @@ body {
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-family: "Poppins", sans-serif;
 }
 
 
@@ -61,12 +62,19 @@ code {
 /* make this a separate componenet to blend the triangle edge */
 
 .page {
+    font-family: "Poppins", sans-serif;
     height: 100vh;
     background: linear-gradient( to bottom left, var(--col-background-secondary) 0%, var(--col-background-secondary) 50%, var(--col-background-primary) 50%, var(--col-background-primary) 100%);
 }
 
+.title-text {
+    font-weight: 600;
+    color: var(--col-selected-text);
+}
+
 .banner {
     /* opacity: 70%; */
+    position: relative;
     background-color: var(--col-primary);
     overflow: hidden;
     color: var(--col-banner-text);
@@ -77,6 +85,7 @@ code {
     align-items: center;
     gap: 50px;
     box-shadow: var(--shadow);
+    z-index: 2;
 }
 
 .banner-line {
@@ -101,6 +110,7 @@ code {
 
 .banner-text {
     cursor: pointer;
+    font-weight: 900;
     margin: 0;
 }
 
@@ -239,6 +249,7 @@ li:not(:last-child) {
 
 .page-title {
     text-align: center;
+    font-weight: 600;
     font-size: 30px;
 }
 
@@ -279,7 +290,7 @@ li:not(:last-child) {
 .contact-icon {
     text-align: center;
     width: 50px;
-    filter: brightness(0) invert(1);
+    filter: invert(67%) sepia(0%) saturate(2275%) hue-rotate(59deg) brightness(103%) contrast(105%);
 }
 
 .contact-info {
@@ -375,7 +386,7 @@ body {
 .year-label {
     width: 80px;
     text-align: center;
-    color: var(--col-regular-text);
+    color: var(--col-selected-text);
     margin: auto;
     background-color: var(--col-banner-text);
     z-index: 2;

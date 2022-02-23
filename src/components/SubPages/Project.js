@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+// import React, { Children } from "react"
 import Technology from "./Technology";
 import Panel from "./Panel";
 import github from "../../images/github.png";
@@ -22,13 +22,22 @@ const Project = ({ children, name, technologies, repo }) => {
       //   }
     >
       {" "}
-      <div style={{ display: "flex", flexDirection: "column", rowGap: "20px" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          rowGap: "20px",
+          height: "100%",
+        }}
+      >
         <div className="panel-text">{children}</div>
         <a
           style={{
             display: "block",
             marginLeft: "auto",
             marginRight: "auto",
+
+            marginTop: "auto",
           }}
           href={repo}
           target="_blank"
