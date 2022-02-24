@@ -293,6 +293,10 @@ li:not(:last-child) {
     filter: invert(67%) sepia(0%) saturate(2275%) hue-rotate(59deg) brightness(103%) contrast(105%);
 }
 
+.white {
+    filter: brightness(0) invert(1);
+}
+
 .contact-info {
     /* display: table-cell; */
     margin-top: 10px;

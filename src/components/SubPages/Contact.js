@@ -5,6 +5,7 @@ import email from "../../images/email.png";
 import phone from "../../images/phone.png";
 import linkedin from "../../images/linkedin.png";
 import github from "../../images/github.png";
+import resume from "../../images/resume.png";
 
 const Contact = () => {
   const colWidth = "100%";
@@ -19,7 +20,7 @@ const Contact = () => {
             <img
               src={email}
               alt="email icon"
-              className="contact-icon icon"
+              className="contact-icon icon white white"
             ></img>
           }
           horizontal
@@ -37,7 +38,7 @@ const Contact = () => {
             <img
               src={phone}
               alt="phone icon"
-              className="contact-icon icon"
+              className="contact-icon icon white"
             ></img>
           }
           horizontal
@@ -55,7 +56,7 @@ const Contact = () => {
             <img
               src={linkedin}
               alt="linkedin icon"
-              className="contact-icon icon"
+              className="contact-icon icon white"
             ></img>
           }
           horizontal
@@ -76,7 +77,7 @@ const Contact = () => {
             <img
               src={github}
               alt="github icon"
-              className="contact-icon icon"
+              className="contact-icon icon white"
             ></img>
           }
           horizontal
@@ -85,6 +86,30 @@ const Contact = () => {
           <div style={{ width: colWidth }}>
             <h3 className="contact-info external-link">
               <a href={"https://github.com/itbergl"}> my github profile</a>
+            </h3>
+          </div>
+        </Panel>
+        <Panel
+          width={colWidth}
+          title={
+            <img
+              src={resume}
+              alt="document icon"
+              className="contact-icon icon white"
+            ></img>
+          }
+          horizontal
+          footer={<div className="contact-icon icon"></div>}
+        >
+          <div style={{ width: colWidth }}>
+            <h3 className="contact-info external-link">
+              <a
+                href={"documents/Resume 2022.pdf"}
+                download="Isaac Bergl Resume.pdf"
+              >
+                {" "}
+                download my resume
+              </a>
             </h3>
           </div>
         </Panel>

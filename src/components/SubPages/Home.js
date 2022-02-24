@@ -51,6 +51,17 @@ const Home = () => {
                     In my spare time I enjoy doing coding projects and playing
                     music.
                   </p>
+
+                  <p>
+                    You can download my resume{" "}
+                    <a
+                      href={"documents/Resume 2022.pdf"}
+                      download="Isaac Bergl Resume.pdf"
+                    >
+                      here
+                    </a>
+                    .
+                  </p>
                   <p>Feel free to explore my webpage!</p>
                 </div>
               </div>
@@ -158,7 +169,8 @@ const Home = () => {
                   <div
                     style={{ display: "flex", justifyContent: "space-around" }}
                   >
-                    <p>GPA: 6.692</p> <p>Weighted Average Mark (WAM): 83.192</p>
+                    <p>GPA | 6.692</p>{" "}
+                    <p>Weighted Average Mark (WAM) | 83.192</p>
                   </div>
                 </div>
                 <Panel
@@ -295,7 +307,7 @@ const Home = () => {
                       </div>
 
                       <ul>
-                        <li>ATAR - 98.5</li>
+                        <li>ATAR | 98.5</li>
                         <li>
                           {" "}
                           Achieved Young Engineers Award for outstanding
