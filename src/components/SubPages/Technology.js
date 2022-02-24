@@ -26,7 +26,11 @@ const Technology = ({ children, name, height, label }) => {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+      }}
+    >
       <img
         style={{ height: height }}
         src={map[name]}

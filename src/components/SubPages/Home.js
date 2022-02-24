@@ -43,9 +43,9 @@ const Home = () => {
                   </p>
                   <p>
                     I have an undergraduate degree in Computer Science, with a
-                    second major in applied and pure mathematics and I am doing
-                    my honours year in 2022 about convolutionary neural networks
-                    for detecting the presence of small objects in images.
+                    second major in Applied and Pure Mathematics. I am doing my
+                    honours year in 2022 about convolutional neural networks for
+                    detecting small objects in images.
                   </p>
                   <p>
                     In my spare time I enjoy doing coding projects and playing
