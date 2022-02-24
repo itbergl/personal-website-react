@@ -57,6 +57,7 @@ const Home = () => {
                     <a
                       href={"documents/Resume 2022.pdf"}
                       download="Isaac Bergl Resume.pdf"
+                      style={{ color: "var(--col-selected-text)" }}
                     >
                       here
                     </a>
