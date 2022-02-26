@@ -204,7 +204,8 @@ a:visited {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    column-gap: 70px;
+    row-gap: 20px;
     grid-auto-columns: max-content;
     grid-auto-rows: auto;
     /* grid-template-rows: repeat(3, 1fr); */

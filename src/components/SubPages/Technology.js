@@ -12,33 +12,71 @@ import unity from "../../images/unity.svg";
 
 const Technology = ({ children, name, height, label }) => {
   const map = {
-    java: java,
-    python: python,
-    c: c,
-    csharp: csharp,
-    css: css,
-    git: git,
-    azure: azure,
-    html5: html5,
-    javascript: javascript,
-    react: react,
-    unity: unity,
+    java: {
+      object: java,
+      name: "Java",
+    },
+    python: {
+      object: python,
+      name: "Python",
+    },
+    c: {
+      object: c,
+      name: "C",
+    },
+    csharp: {
+      object: csharp,
+      name: "C#",
+    },
+    css: {
+      object: css,
+      name: "CSS",
+    },
+    git: {
+      object: git,
+      name: "Git",
+    },
+    azure: {
+      object: azure,
+      name: "Azure",
+    },
+    html5: {
+      object: html5,
+      name: "HTML 5",
+    },
+    javascript: {
+      object: javascript,
+      name: "JavaScript",
+    },
+    react: {
+      object: react,
+      name: "React.js",
+    },
+    unity: {
+      object: unity,
+      name: "Unity",
+    },
   };
 
   return (
     <div
       style={{
         display: "flex",
+        flexDirection: "column",
       }}
     >
       <img
-        style={{ height: height }}
-        src={map[name]}
-        alt={name + " icon"}
-        className="icon"
+        style={{
+          height: height,
+        }}
+        src={map[name]["object"]}
+        alt={map[name]["name"] + " icon"}
+        className={"icon" + (map[name]["name"] === "unity" ? " white" : "")}
       />
       {children}
-      {label ? <p style={{ textAlign: "center" }}>{name}</p> : null}
+      {label ? (
+        <p style={{ textAlign: "center" }}>{map[name]["name"]}</p>
+      ) : null}
     </div>
   );
 };

@@ -10,7 +10,7 @@ const Project = ({ children, name, technologies, repo }) => {
       footer={
         <div
           className="technology-home-grid"
-          style={{ padding: "8px 0 8px 0" }}
+          style={{ gap: "50px", padding: "8px 0 8px 0" }}
         >
           {technologies.map((tech) => (
             <Technology key={tech} height="40px" name={tech}></Technology>
