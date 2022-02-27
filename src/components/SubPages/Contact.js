@@ -107,8 +107,7 @@ const Contact = () => {
                 href={"documents/Resume 2022.pdf"}
                 download="Isaac Bergl Resume.pdf"
               >
-                {" "}
-                download my resume
+                download my resume <i class="fa fa-download"></i>
               </a>
             </h3>
           </div>

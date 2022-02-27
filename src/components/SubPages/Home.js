@@ -6,6 +6,7 @@ import piderman from "../../images/piderman.gif";
 import Experience from "./Experience";
 import uwa from "../../images/uwa.png";
 import cshs from "../../images/cshs.png";
+
 const technologies = [
   "python",
   "javascript",
@@ -59,9 +60,8 @@ const Home = () => {
                       download="Isaac Bergl Resume.pdf"
                       style={{ color: "var(--col-selected-text)" }}
                     >
-                      here
+                      here <i class="fa fa-download"></i>
                     </a>
-                    .
                   </p>
                   <p>Feel free to explore my webpage!</p>
                 </div>
@@ -335,7 +335,7 @@ const Home = () => {
               <p style={{ textAlign: "center" }}>
                 You can check out the source code{" "}
                 <a href="https://github.com/itbergl/personal-website-react">
-                  here
+                  here{" "}
                 </a>
                 .
               </p>

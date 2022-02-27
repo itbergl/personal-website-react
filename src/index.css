@@ -91,6 +91,7 @@ a:visited {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     align-items: center;
+    padding-right: 60px;
     gap: 50px;
     box-shadow: var(--shadow);
     z-index: 2;
@@ -304,6 +305,10 @@ li:not(:last-child) {
 
 .white {
     filter: brightness(0) invert(1);
+}
+
+.unity {
+    filter: brightness(0) invert(0.75);
 }
 
 .contact-info {

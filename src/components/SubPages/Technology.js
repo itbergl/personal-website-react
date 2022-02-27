@@ -71,7 +71,7 @@ const Technology = ({ children, name, height, label }) => {
         }}
         src={map[name]["object"]}
         alt={map[name]["name"] + " icon"}
-        className={"icon" + (map[name]["name"] === "unity" ? " white" : "")}
+        className={"icon" + (name === "unity" ? " unity" : "")}
       />
       {children}
       {label ? (
