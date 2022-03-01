@@ -28,7 +28,7 @@ const Home = () => {
   return (
     <div>
       <div>
-        <Spotlight></Spotlight>
+        {/* <Spotlight></Spotlight> */}
         <div className="home-title-display">
           <h1>Isaac Bergl</h1>
           <h2>Software Engineer</h2>
