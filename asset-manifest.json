@@ -1,14 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.4fd2e7c3.css",
-    "main.js": "/static/js/main.a5a32fad.js",
+    "main.js": "/static/js/main.264dd671.js",
     "static/js/787.a20085b6.chunk.js": "/static/js/787.a20085b6.chunk.js",
-    "static/media/piderman.gif": "/static/media/piderman.bac369ffa8f14f8d5235.gif",
+    "static/media/spiderman.gif": "/static/media/spiderman.bac369ffa8f14f8d5235.gif",
     "static/media/uwa.png": "/static/media/uwa.f5fffd55c9983a2464aa.png",
     "static/media/resume.png": "/static/media/resume.db35f48be92f7039e602.png",
     "static/media/cshs.png": "/static/media/cshs.7ccc2125b8d8a160e914.png",
-    "static/media/phone.png": "/static/media/phone.6e168b55178f00c60ee5.png",
-    "static/media/github.png": "/static/media/github.24ce5338e64b1820ea32.png",
     "static/media/java.svg": "/static/media/java.35e27dc0212ae1a663ae44a9c0f302e5.svg",
     "static/media/css.svg": "/static/media/css.dbd31fe14ec796185689723739441965.svg",
     "static/media/react.svg": "/static/media/react.1520bd67b9711ed91ace46b169bc2491.svg",
@@ -22,11 +20,11 @@
     "static/media/javascript.svg": "/static/media/javascript.218515feb76f692771fe00cfeadc46c8.svg",
     "static/media/azure.svg": "/static/media/azure.38ae96efdd598ed270975e3b52c4fb4d.svg",
     "main.4fd2e7c3.css.map": "/static/css/main.4fd2e7c3.css.map",
-    "main.a5a32fad.js.map": "/static/js/main.a5a32fad.js.map",
+    "main.264dd671.js.map": "/static/js/main.264dd671.js.map",
     "787.a20085b6.chunk.js.map": "/static/js/787.a20085b6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4fd2e7c3.css",
-    "static/js/main.a5a32fad.js"
+    "static/js/main.264dd671.js"
   ]
 }
