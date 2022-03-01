@@ -1,11 +1,12 @@
 import React from "react";
 import Panel from "./Panel";
 
-import email from "../../images/email.png";
-import phone from "../../images/phone.png";
-import linkedin from "../../images/linkedin.png";
-import github from "../../images/github.png";
 import resume from "../../images/resume.png";
+import { FaFileDownload } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaPhoneSquareAlt } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
 
 const Contact = () => {
   const colWidth = "100%";
@@ -17,11 +18,9 @@ const Contact = () => {
           width={colWidth}
           // bannerColor="var(--col-primary)"
           title={
-            <img
-              src={email}
-              alt="email icon"
-              className="contact-icon icon white white"
-            ></img>
+            <div className="contact-icon icon white">
+              <AiOutlineMail size="auto" />
+            </div>
           }
           horizontal
           footer={<div className="contact-icon icon"></div>}
@@ -35,11 +34,9 @@ const Contact = () => {
         <Panel
           width={colWidth}
           title={
-            <img
-              src={phone}
-              alt="phone icon"
-              className="contact-icon icon white"
-            ></img>
+            <div className="contact-icon icon white">
+              <FaPhoneSquareAlt size="auto" />
+            </div>
           }
           horizontal
           footer={<div className="contact-icon icon"></div>}
@@ -53,11 +50,9 @@ const Contact = () => {
         <Panel
           width={colWidth}
           title={
-            <img
-              src={linkedin}
-              alt="linkedin icon"
-              className="contact-icon icon white"
-            ></img>
+            <div className="contact-icon icon white">
+              <FaLinkedin size="auto" />
+            </div>
           }
           horizontal
           footer={<div className="contact-icon icon"></div>}
@@ -74,11 +69,9 @@ const Contact = () => {
         <Panel
           width={colWidth}
           title={
-            <img
-              src={github}
-              alt="github icon"
-              className="contact-icon icon white"
-            ></img>
+            <div className="contact-icon icon white">
+              <FaGithub size="auto" />
+            </div>
           }
           horizontal
           footer={<div className="contact-icon icon"></div>}
@@ -103,11 +96,12 @@ const Contact = () => {
         >
           <div style={{ width: colWidth }}>
             <h3 className="contact-info external-link">
+              <FaFileDownload size="18px" color="white" />{" "}
               <a
                 href={"documents/Resume 2022.pdf"}
                 download="Isaac Bergl Resume.pdf"
               >
-                download my resume <i class="fa fa-download"></i>
+                Download my Resume
               </a>
             </h3>
           </div>

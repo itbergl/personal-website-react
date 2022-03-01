@@ -1,5 +1,6 @@
 // import Panel from "./Panel";
 import TimelineEvent from "./TimelineEvent";
+import { FaFileDownload } from "react-icons/fa";
 
 const Experience = () => {
   const year = (year) => {
@@ -64,7 +65,19 @@ const Experience = () => {
         >
           Worked with researcher Dr Zeyi Wen to critically analyse frontier
           research into the robustness verifcation of tree-based ensemble
-          machine learning models.
+          machine learning models.{" "}
+          <p>
+            You can download my report{" "}
+            <FaFileDownload size="13px" color="white" />{" "}
+            <a
+              href={"documents/Literature Review.pdf"}
+              download="Robustness Verification Problem for Tree Ensembles.pdf"
+              style={{ color: "var(--col-selected-text)" }}
+            >
+              here
+            </a>
+            .
+          </p>
         </TimelineEvent>
         {year("2021")}
         <div />

@@ -59,7 +59,7 @@ const Projects = ({ showOverlay }) => {
         <Project
           name="Wood Hackathon"
           technologies={["javascript", "html5", "css"]}
-          repo="https://github.com/cookies-xor-cream/wood-hackathon-2021 "
+          repo="https://github.com/cookies-xor-cream/wood-hackathon-2021"
         >
           Won first place in a Hackathon by engineering consulting company Wood.
           Worked in a team of 4 to create an interactive web app in 24 hours
@@ -78,10 +78,23 @@ const Projects = ({ showOverlay }) => {
           technologies={["python"]}
           repo="https://github.com/itbergl/swarm"
         >
-          Created a 3D boid simulator according to [this paper] by PERSON. The
-          purpose of this paper was to model the behaviour of swarming animals
-          like fish, birds and insects using a simple set of rules for each
-          creature.
+          Created a 3D boid simulator as described in a paper by Iain D. Couzin
+          et al -
+          <a
+            href={
+              "https://www.sciencedirect.com/science/article/abs/pii/S0022519302930651"
+            }
+            target="_blank"
+            rel="noreferrer"
+          >
+            Collective Memory and Spatial Sorting in Animal Groups
+          </a>
+          .{" "}
+          <p>
+            The purpose of this paper was to model the behaviour of swarming
+            animals like fish, birds and insects using various zones of
+            attraction, repulsion, allignment and blindness for each agent.
+          </p>
         </Project>
         <Project
           name="Personal Website"

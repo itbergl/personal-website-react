@@ -1,7 +1,7 @@
 // import React, { Children } from "react"
 import Technology from "./Technology";
 import Panel from "./Panel";
-import github from "../../images/github.png";
+import { FaGithub } from "react-icons/fa";
 
 const Project = ({ children, name, technologies, repo }) => {
   return (
@@ -43,11 +43,9 @@ const Project = ({ children, name, technologies, repo }) => {
           target="_blank"
           rel="noreferrer"
         >
-          <img
-            src={github}
-            alt="github icon"
-            className="contact-icon icon"
-          ></img>
+          <div className="contact-icon icon white">
+            <FaGithub size="auto" />
+          </div>
         </a>
       </div>
     </Panel>

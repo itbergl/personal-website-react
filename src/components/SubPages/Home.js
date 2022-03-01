@@ -1,11 +1,14 @@
 import Panel from "./Panel";
 
 import Technology from "./Technology";
-import piderman from "../../images/piderman.gif";
+import spiderman from "../../images/spiderman.gif";
 
 import Experience from "./Experience";
 import uwa from "../../images/uwa.png";
 import cshs from "../../images/cshs.png";
+
+import { FaFileDownload } from "react-icons/fa";
+import Spotlight from "./Spotlight";
 
 const technologies = [
   "python",
@@ -25,6 +28,7 @@ const Home = () => {
   return (
     <div>
       <div>
+        <Spotlight></Spotlight>
         <div className="home-title-display">
           <h1>Isaac Bergl</h1>
           <h2>Software Engineer</h2>
@@ -55,13 +59,15 @@ const Home = () => {
 
                   <p>
                     You can download my resume{" "}
+                    <FaFileDownload size="18px" color="white" />{" "}
                     <a
                       href={"documents/Resume 2022.pdf"}
                       download="Isaac Bergl Resume.pdf"
                       style={{ color: "var(--col-selected-text)" }}
                     >
-                      here <i class="fa fa-download"></i>
+                      here
                     </a>
+                    .
                   </p>
                   <p>Feel free to explore my webpage!</p>
                 </div>
@@ -340,7 +346,11 @@ const Home = () => {
                 .
               </p>
               <div style={{ left: "50%", margin: "auto", width: "200px" }}>
-                <img src={piderman} alt="this slowpoke moves" width="200" />
+                <img
+                  src={spiderman}
+                  alt="spiderman doing a dance"
+                  width="200"
+                />
               </div>
               <p>Above is a gif of Spiderman dancing.</p>
             </div>
