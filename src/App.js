@@ -19,9 +19,10 @@ const bannerHeight = "70px";
 function App() {
   // TODO caching
 
-  const [selectedPage, setSelectedPage] = useState(true);
+  const [selectedPage, setSelectedPage] = useState("/home");
 
   const [overlay, setOverlay] = useState("hidden");
+
   const [spotlightvisible, setspotlightvisible] = useState(false);
 
   const showOverlay = (content) => {
@@ -31,7 +32,7 @@ function App() {
 
   return (
     <div className="page">
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div></div>
         {spotlightvisible ? (
           <Spotlight
