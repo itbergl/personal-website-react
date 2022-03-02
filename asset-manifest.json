@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.76ff91fd.css",
-    "main.js": "/static/js/main.dbb3b432.js",
+    "main.js": "/static/js/main.3de382dc.js",
     "static/js/787.a20085b6.chunk.js": "/static/js/787.a20085b6.chunk.js",
     "static/media/spiderman.gif": "/static/media/spiderman.bac369ffa8f14f8d5235.gif",
     "static/media/uwa.png": "/static/media/uwa.f5fffd55c9983a2464aa.png",
@@ -20,11 +20,11 @@
     "static/media/javascript.svg": "/static/media/javascript.218515feb76f692771fe00cfeadc46c8.svg",
     "static/media/azure.svg": "/static/media/azure.38ae96efdd598ed270975e3b52c4fb4d.svg",
     "main.76ff91fd.css.map": "/static/css/main.76ff91fd.css.map",
-    "main.dbb3b432.js.map": "/static/js/main.dbb3b432.js.map",
+    "main.3de382dc.js.map": "/static/js/main.3de382dc.js.map",
     "787.a20085b6.chunk.js.map": "/static/js/787.a20085b6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.76ff91fd.css",
-    "static/js/main.dbb3b432.js"
+    "static/js/main.3de382dc.js"
   ]
 }
