@@ -19,7 +19,7 @@ const Contact = () => {
           // bannerColor="var(--col-primary)"
           title={
             <div className="contact-icon icon white">
-              <AiOutlineMail size="auto" />
+              <AiOutlineMail size="100%" />
             </div>
           }
           horizontal
@@ -35,7 +35,7 @@ const Contact = () => {
           width={colWidth}
           title={
             <div className="contact-icon icon white">
-              <FaPhoneSquareAlt size="auto" />
+              <FaPhoneSquareAlt size="100%" />
             </div>
           }
           horizontal
@@ -51,7 +51,7 @@ const Contact = () => {
           width={colWidth}
           title={
             <div className="contact-icon icon white">
-              <FaLinkedin size="auto" />
+              <FaLinkedin size="100%" />
             </div>
           }
           horizontal
@@ -60,7 +60,11 @@ const Contact = () => {
         >
           <div style={{ width: colWidth }}>
             <h3 className="contact-info external-link">
-              <a href={"https://www.linkedin.com/in/isaac-bergl-2531b81b5/"}>
+              <a
+                href={"https://www.linkedin.com/in/isaac-bergl-2531b81b5/"}
+                target="_blank"
+                rel="noreferrer"
+              >
                 my LinkedIn profile
               </a>
             </h3>
@@ -70,7 +74,7 @@ const Contact = () => {
           width={colWidth}
           title={
             <div className="contact-icon icon white">
-              <FaGithub size="auto" />
+              <FaGithub size="100%" />
             </div>
           }
           horizontal
@@ -78,7 +82,14 @@ const Contact = () => {
         >
           <div style={{ width: colWidth }}>
             <h3 className="contact-info external-link">
-              <a href={"https://github.com/itbergl"}> my github profile</a>
+              <a
+                href={"https://github.com/itbergl"}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {" "}
+                my github profile
+              </a>
             </h3>
           </div>
         </Panel>

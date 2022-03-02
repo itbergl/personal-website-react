@@ -44,7 +44,7 @@ const Project = ({ children, name, technologies, repo }) => {
           rel="noreferrer"
         >
           <div className="contact-icon icon white">
-            <FaGithub size="auto" />
+            <FaGithub size="100%" />
           </div>
         </a>
       </div>

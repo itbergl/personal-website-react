@@ -8,7 +8,7 @@ import uwa from "../../images/uwa.png";
 import cshs from "../../images/cshs.png";
 
 import { FaFileDownload } from "react-icons/fa";
-import Spotlight from "./Spotlight";
+// import Spotlight from "./Spotlight";
 
 const technologies = [
   "python",
