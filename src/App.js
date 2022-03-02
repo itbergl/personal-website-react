@@ -3,7 +3,7 @@ import Banner from "./components/Banner";
 import React, { useState } from "react";
 import Spotlight from "./components/SubPages/Spotlight";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Routes,
   Navigate,
@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div className="page">
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <div></div>
         {spotlightvisible ? (
           <Spotlight
