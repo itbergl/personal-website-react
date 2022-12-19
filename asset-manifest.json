@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.76ff91fd.css",
-    "main.js": "/static/js/main.48114fa6.js",
+    "main.css": "/static/css/main.4f104753.css",
+    "main.js": "/static/js/main.410bb3cb.js",
     "static/js/787.a20085b6.chunk.js": "/static/js/787.a20085b6.chunk.js",
     "static/media/spiderman.gif": "/static/media/spiderman.bac369ffa8f14f8d5235.gif",
     "static/media/uwa.png": "/static/media/uwa.f5fffd55c9983a2464aa.png",
@@ -23,12 +23,12 @@
     "static/media/unity.svg": "/static/media/unity.f9fefbc4c2cf9b8464a3654c49318919.svg",
     "static/media/javascript.svg": "/static/media/javascript.218515feb76f692771fe00cfeadc46c8.svg",
     "static/media/azure.svg": "/static/media/azure.38ae96efdd598ed270975e3b52c4fb4d.svg",
-    "main.76ff91fd.css.map": "/static/css/main.76ff91fd.css.map",
-    "main.48114fa6.js.map": "/static/js/main.48114fa6.js.map",
+    "main.4f104753.css.map": "/static/css/main.4f104753.css.map",
+    "main.410bb3cb.js.map": "/static/js/main.410bb3cb.js.map",
     "787.a20085b6.chunk.js.map": "/static/js/787.a20085b6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.76ff91fd.css",
-    "static/js/main.48114fa6.js"
+    "static/css/main.4f104753.css",
+    "static/js/main.410bb3cb.js"
   ]
 }
