@@ -22,38 +22,40 @@ const Experience = () => {
           quaerat sint quos, cumque voluptates rerum a omnis distinctio. Non,
           illo?
         </TimelineEvent> */}
-        <div />
-            
-            <TimelineEvent
-              title="QFIN"
-              position="Director of Trading"
-              time="Oct 2022 - Present"
-            >
-              Worked as a software engineer intern over Chevron's Horizon Vacation
-              program. I worked with technologies such as .NET core, Azure and Unity
-              to engineer a data pipeline from on-site sensor data to an extranet
-              client. Developed skills such as working collaboratively in a team,
-              communication and working on an agile project.
-            </TimelineEvent>
-            <div />
         
-        <div />
+            
+        <TimelineEvent
+          title="QFIN"
+          position="Director of Trading"
+          time="Oct 2022 - Present"
+        >
+          Voted into executive position as Director of Trading at QFIN to design and
+          implement a software for traders to build custom algorithms, manage teams of traders
+          and run educational workshops on coding.
+        </TimelineEvent>
+        
+        
             
         <TimelineEvent
           title="UWA / DSTG"
-          position="Machine Learning Honours Research"
+          position="Honours in Machine Learning"
           time="Feb 2022 - Nov 2022"
         >
-          Worked as a software engineer intern over Chevron's Horizon Vacation
-          program. I worked with technologies such as .NET core, Azure and Unity
-          to engineer a data pipeline from on-site sensor data to an extranet
-          client. Developed skills such as working collaboratively in a team,
-          communication and working on an agile project.
+          Worked with the Defencse Science Technology Group (DSTG) to research and train state-of-the-art
+          machine learning models for the detection of small objects in videos as my Honours dissertation. I produced results
+          for the university and the DSTG that earned first class honours.
+        </TimelineEvent>
+        <TimelineEvent
+          title="JB HI-FI"
+          position="Sales Assistant"
+          time="Feb 2022 - Present"
+        >
+          Started casual work at JB HI-FI to build professional skills.
         </TimelineEvent>
         <div />
-        <div></div>
+        
         {year("2022")}
-        <div />
+        
         <TimelineEvent
           title="Chevron"
           position="Software Engineer Intern"

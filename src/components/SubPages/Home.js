@@ -193,6 +193,15 @@ const Home = () => {
                 >
                   <div className="technology-home-grid">
                     <div className="subject">
+                      <h4>Machine Learning</h4>
+                    </div>
+                    <div className="subject">
+                      <h4>Computer Vision</h4>
+                    </div>
+                    <div className="subject">
+                      <h4>Natural Language Processing</h4>
+                    </div>
+                    <div className="subject">
                       <h4>Systems Programming</h4>
                     </div>
                     <div className="subject">
