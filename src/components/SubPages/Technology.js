@@ -1,5 +1,11 @@
 import java from "../../images/java.svg";
+
 import python from "../../images/python.svg";
+import pandas from "../../images/pandas.png";
+import numpy from "../../images/numpy.svg";
+import pytorch from "../../images/pytorch.svg";
+import matplotlib from "../../images/matplotlib.svg";
+
 import c from "../../images/c.svg";
 import csharp from "../../images/csharp.svg";
 import css from "../../images/css.svg";
@@ -16,9 +22,29 @@ const Technology = ({ children, name, height, label }) => {
       object: java,
       name: "Java",
     },
+    
     python: {
-      object: python,
-      name: "Python",
+        object: python,
+        name: "Python",
+      },
+    pandas: {
+      object: pandas,
+      name: "Pandas",
+    },
+
+    numpy: {
+      object: numpy,
+      name: "Numpy",
+    },
+
+    pytorch: {
+      object: pytorch,
+      name: "Pytorch",
+    },
+
+    matplotlib: {
+      object: matplotlib,
+      name: "Matplotlib",
     },
     c: {
       object: c,

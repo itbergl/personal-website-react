@@ -22,6 +22,36 @@ const Experience = () => {
           quaerat sint quos, cumque voluptates rerum a omnis distinctio. Non,
           illo?
         </TimelineEvent> */}
+        <div />
+            
+            <TimelineEvent
+              title="QFIN"
+              position="Director of Trading"
+              time="Oct 2022 - Present"
+            >
+              Worked as a software engineer intern over Chevron's Horizon Vacation
+              program. I worked with technologies such as .NET core, Azure and Unity
+              to engineer a data pipeline from on-site sensor data to an extranet
+              client. Developed skills such as working collaboratively in a team,
+              communication and working on an agile project.
+            </TimelineEvent>
+            <div />
+        
+        <div />
+            
+        <TimelineEvent
+          title="UWA / DSTG"
+          position="Machine Learning Honours Research"
+          time="Feb 2022 - Nov 2022"
+        >
+          Worked as a software engineer intern over Chevron's Horizon Vacation
+          program. I worked with technologies such as .NET core, Azure and Unity
+          to engineer a data pipeline from on-site sensor data to an extranet
+          client. Developed skills such as working collaboratively in a team,
+          communication and working on an agile project.
+        </TimelineEvent>
+        <div />
+        <div></div>
         {year("2022")}
         <div />
         <TimelineEvent
@@ -40,7 +70,7 @@ const Experience = () => {
         <TimelineEvent
           title="QFIN"
           position="Trading Team Member"
-          time="Apr 2021- Present"
+          time="Apr 2021 - Oct 2022"
         >
           QFIN - Quantitative Finance - is a UWA club that aims to share
           knowledge and educate about quantivative finance - a branch of finance

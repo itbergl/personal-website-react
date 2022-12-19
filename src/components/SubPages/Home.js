@@ -12,6 +12,10 @@ import { FaFileDownload } from "react-icons/fa";
 
 const technologies = [
   "python",
+  "numpy",
+  "pytorch",
+  "pandas",
+  "matplotlib",
   "javascript",
   "html5",
   "css",
